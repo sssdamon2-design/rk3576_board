@@ -1,0 +1,70 @@
+[  2%] Building CXX object CMakeFiles/asr_pipeline_tests.dir/tests/asr_pipeline_tests.cpp.o
+[  2%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/audio_capture.cpp.o
+[  4%] Building CXX object CMakeFiles/multimodal_core.dir/src/video/latest_frame_buffer.cpp.o
+[  5%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/audio_preprocessor.cpp.o
+[  7%] Building CXX object CMakeFiles/multimodal_core.dir/src/ai/llm_engine.cpp.o
+[  8%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/asr_service.cpp.o
+[  9%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/asr_pipeline.cpp.o
+[ 11%] Building CXX object CMakeFiles/multimodal_core.dir/src/ai/llm_worker.cpp.o
+[ 12%] Building CXX object CMakeFiles/asr_pipeline_tests.dir/src/audio/asr_pipeline.cpp.o
+[ 14%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/audio_worker.cpp.o
+[ 15%] Building CXX object CMakeFiles/asr_pipeline_tests.dir/src/audio/audio_preprocessor.cpp.o
+[ 16%] Building CXX object CMakeFiles/multimodal_core.dir/src/ai/vlm_engine.cpp.o
+[ 18%] Linking CXX executable asr_pipeline_tests
+[ 18%] Built target asr_pipeline_tests
+[ 19%] Building CXX object CMakeFiles/audio_preprocessor_tests.dir/tests/audio_preprocessor_tests.cpp.o
+[ 21%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/vad_audio_worker.cpp.o
+[ 22%] Building CXX object CMakeFiles/audio_preprocessor_tests.dir/src/audio/audio_preprocessor.cpp.o
+[ 23%] Building CXX object CMakeFiles/multimodal_core.dir/src/ai/rk_backends_unavailable.cpp.o
+[ 25%] Linking CXX executable audio_preprocessor_tests
+[ 25%] Built target audio_preprocessor_tests
+[ 26%] Building CXX object CMakeFiles/multimodal_core.dir/src/router/intent_router.cpp.o
+[ 28%] Building CXX object CMakeFiles/multimodal_core.dir/src/app/request_processor.cpp.o
+[ 29%] Building CXX object CMakeFiles/multimodal_core.dir/src/ai/rkllm_backend.cpp.o
+[ 30%] Linking CXX static library libmultimodal_audio.a
+[ 30%] Built target multimodal_audio
+[ 32%] Building CXX object CMakeFiles/multimodal_core.dir/src/ai/rk3576_vlm_backend.cpp.o
+[ 33%] Building CXX object CMakeFiles/audio_capture_smoke.dir/src/audio/audio_capture_smoke.cpp.o
+[ 35%] Building CXX object CMakeFiles/asr_live_smoke.dir/src/audio/asr_live_smoke.cpp.o
+[ 36%] Linking CXX executable audio_capture_smoke
+[ 36%] Built target audio_capture_smoke
+[ 38%] Building CXX object CMakeFiles/asr_pipeline_smoke.dir/src/audio/asr_pipeline_smoke.cpp.o
+[ 39%] Linking CXX static library libmultimodal_core.a
+[ 40%] Linking CXX executable asr_live_smoke
+[ 40%] Built target multimodal_core
+[ 42%] Building CXX object CMakeFiles/asr_vad_smoke.dir/src/audio/asr_vad_smoke.cpp.o
+[ 42%] Built target asr_live_smoke
+[ 43%] Building CXX object CMakeFiles/asr_llm_smoke.dir/src/audio/asr_llm_smoke.cpp.o
+[ 45%] Linking CXX executable asr_pipeline_smoke
+[ 45%] Built target asr_pipeline_smoke
+[ 46%] Building CXX object CMakeFiles/async_pipeline_tests.dir/tests/async_pipeline_tests.cpp.o
+[ 47%] Linking CXX executable asr_vad_smoke
+[ 47%] Built target asr_vad_smoke
+[ 49%] Building CXX object CMakeFiles/llm_worker_tests.dir/tests/llm_worker_tests.cpp.o
+[ 50%] Linking CXX executable asr_llm_smoke
+[ 50%] Built target asr_llm_smoke
+[ 52%] Building CXX object CMakeFiles/camera_service_tests.dir/tests/camera_service_tests.cpp.o
+[ 53%] Building CXX object CMakeFiles/camera_service_tests.dir/tests/camera_test_capture.cpp.o
+[ 54%] Building CXX object CMakeFiles/camera_service_tests.dir/src/video/camera_service.cpp.o
+[ 56%] Linking CXX executable llm_worker_tests
+[ 56%] Built target llm_worker_tests
+[ 57%] Building CXX object CMakeFiles/multimodal_tts.dir/src/audio/tts_service.cpp.o
+[ 59%] Building CXX object CMakeFiles/async_pipeline_tests.dir/src/audio/asr_pipeline.cpp.o
+[ 60%] Linking CXX executable camera_service_tests
+[ 60%] Built target camera_service_tests
+[ 61%] Building CXX object CMakeFiles/async_pipeline_tests.dir/src/audio/audio_preprocessor.cpp.o
+[ 63%] Building CXX object CMakeFiles/async_pipeline_tests.dir/src/audio/tts_worker.cpp.o
+[ 64%] Building CXX object CMakeFiles/multimodal_tts.dir/src/audio/alsa_playback_service.cpp.o
+[ 66%] Building CXX object CMakeFiles/multimodal_tts.dir/src/audio/tts_worker.cpp.o
+[ 67%] Building CXX object CMakeFiles/multimodal_camera.dir/src/video/camera_service.cpp.o
+[ 69%] Linking CXX executable async_pipeline_tests
+[ 69%] Built target async_pipeline_tests
+[ 70%] Building CXX object CMakeFiles/rkllm_worker_smoke.dir/src/ai/llm_worker_smoke.cpp.o
+[ 71%] Linking CXX static library libmultimodal_tts.a
+[ 71%] Built target multimodal_tts
+[ 73%] Building CXX object CMakeFiles/multimodal_camera.dir/src/video/video_capture.cpp.o
+[ 74%] Building CXX object CMakeFiles/tts_smoke.dir/src/audio/tts_smoke.cpp.o
+[ 76%] Linking CXX executable rkllm_worker_smoke
+[ 76%] Built target rkllm_worker_smoke
+[ 77%] Linking CXX static library libmultimodal_camera.a
+[ 77%] Built target multimodal_camera

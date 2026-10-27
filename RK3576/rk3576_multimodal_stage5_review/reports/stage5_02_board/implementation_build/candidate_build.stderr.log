@@ -1,0 +1,11 @@
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/src/ai/rk_backends_unavailable.cpp:21:17: warning: ‘InferenceResult {anonymous}::unavailable(const char*)’ defined but not used [-Wunused-function]
+   21 | InferenceResult unavailable(const char* message)
+      |                 ^~~~~~~~~~~
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/src/audio/tts_smoke.cpp: In function ‘int main(int, char**)’:
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/src/audio/tts_smoke.cpp:160:20: error: ‘SherpaOnnxWriteWave’ was not declared in this scope
+  160 |     const int ok = SherpaOnnxWriteWave(
+      |                    ^~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/tts_smoke.dir/build.make:76：CMakeFiles/tts_smoke.dir/src/audio/tts_smoke.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:1331：CMakeFiles/tts_smoke.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake: *** [Makefile:101：all] 错误 2

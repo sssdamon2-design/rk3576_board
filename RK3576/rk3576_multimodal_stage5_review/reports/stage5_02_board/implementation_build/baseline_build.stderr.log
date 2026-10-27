@@ -1,0 +1,3 @@
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/reports/stage5_02_board/baseline_build_source/src/ai/rk_backends_unavailable.cpp:21:17: warning: ‘InferenceResult {anonymous}::unavailable(const char*)’ defined but not used [-Wunused-function]
+   21 | InferenceResult unavailable(const char* message)
+      |                 ^~~~~~~~~~~

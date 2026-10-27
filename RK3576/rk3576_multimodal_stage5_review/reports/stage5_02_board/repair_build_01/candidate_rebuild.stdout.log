@@ -1,0 +1,40 @@
+[  5%] Built target asr_pipeline_tests
+[ 19%] Built target multimodal_core
+[ 29%] Built target multimodal_audio
+[ 33%] Built target audio_preprocessor_tests
+[ 36%] Built target rkllm_worker_smoke
+[ 40%] Built target multimodal_camera
+[ 43%] Built target audio_capture_smoke
+[ 46%] Built target asr_live_smoke
+[ 49%] Built target asr_pipeline_smoke
+[ 54%] Built target asr_llm_smoke
+[ 54%] Built target asr_vad_smoke
+[ 56%] Building CXX object CMakeFiles/asr_route_smoke.dir/src/audio/asr_route_smoke.cpp.o
+[ 57%] Building CXX object CMakeFiles/stage5_02_npu_probe.dir/tests/stage5_02_npu_probe.cpp.o
+[ 64%] Built target async_pipeline_tests
+[ 67%] Built target llm_worker_tests
+[ 73%] Built target camera_service_tests
+[ 78%] Built target multimodal_tts
+[ 80%] Building CXX object CMakeFiles/rk3576_multimodal.dir/src/main.cpp.o
+[ 81%] Building CXX object CMakeFiles/rk3576_multimodal.dir/src/app/cli.cpp.o
+[ 83%] Linking CXX executable asr_route_smoke
+[ 84%] Linking CXX executable stage5_02_npu_probe
+[ 84%] Built target asr_route_smoke
+[ 85%] Building CXX object CMakeFiles/tts_smoke.dir/src/audio/tts_smoke.cpp.o
+[ 85%] Built target stage5_02_npu_probe
+[ 87%] Building CXX object CMakeFiles/tts_playback_smoke.dir/src/audio/tts_playback_smoke.cpp.o
+[ 88%] Linking CXX executable tts_smoke
+[ 90%] Linking CXX executable tts_playback_smoke
+[ 90%] Built target tts_smoke
+[ 91%] Building CXX object CMakeFiles/tts_worker_smoke.dir/src/audio/tts_worker_smoke.cpp.o
+[ 91%] Built target tts_playback_smoke
+[ 92%] Building CXX object CMakeFiles/tts_worker_queue_smoke.dir/src/audio/tts_worker_queue_smoke.cpp.o
+[ 94%] Linking CXX executable rk3576_multimodal
+[ 94%] Built target rk3576_multimodal
+[ 95%] Building CXX object CMakeFiles/asr_llm_tts_smoke.dir/src/audio/asr_llm_tts_smoke.cpp.o
+[ 97%] Linking CXX executable tts_worker_smoke
+[ 98%] Linking CXX executable tts_worker_queue_smoke
+[ 98%] Built target tts_worker_smoke
+[ 98%] Built target tts_worker_queue_smoke
+[100%] Linking CXX executable asr_llm_tts_smoke
+[100%] Built target asr_llm_tts_smoke
