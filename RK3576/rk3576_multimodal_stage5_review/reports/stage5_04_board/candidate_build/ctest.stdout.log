@@ -1,0 +1,20 @@
+Internal ctest changing into directory: /home/cat/projects/RK3576/rk3576_multimodal_stage5_review/build/stage5_04_board
+Test project /home/cat/projects/RK3576/rk3576_multimodal_stage5_review/build/stage5_04_board
+    Start 1: request_profile_tests
+1/7 Test #1: request_profile_tests ............   Passed    0.01 sec
+    Start 2: image_pipeline_tests
+2/7 Test #2: image_pipeline_tests .............   Passed    0.62 sec
+    Start 3: async_pipeline_tests
+3/7 Test #3: async_pipeline_tests .............   Passed    0.03 sec
+    Start 4: asr_pipeline_tests
+4/7 Test #4: asr_pipeline_tests ...............   Passed    0.02 sec
+    Start 5: audio_preprocessor_tests
+5/7 Test #5: audio_preprocessor_tests .........   Passed    0.01 sec
+    Start 6: llm_worker_tests
+6/7 Test #6: llm_worker_tests .................   Passed    0.01 sec
+    Start 7: camera_service_tests
+7/7 Test #7: camera_service_tests .............   Passed    0.22 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   0.93 sec

@@ -1,0 +1,15 @@
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_04_source_v3/src/ai/rk_backends_unavailable.cpp:21:17: warning: ‘InferenceResult {anonymous}::unavailable(const char*)’ defined but not used [-Wunused-function]
+   21 | InferenceResult unavailable(const char* message)
+      |                 ^~~~~~~~~~~
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_04_source_v3/tests/request_profile_tests.cpp: In function ‘void {anonymous}::fixtureChecks(const std::filesystem::__cxx11::path&)’:
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_04_source_v3/tests/request_profile_tests.cpp:25:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   25 |     for(const auto& file:std::filesystem::directory_iterator(folder))std::filesystem::remove(file.path());std::filesystem::remove(folder);
+      |     ^~~
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_04_source_v3/tests/request_profile_tests.cpp:25:107: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   25 |     for(const auto& file:std::filesystem::directory_iterator(folder))std::filesystem::remove(file.path());std::filesystem::remove(folder);
+      |                                                                                                           ^~~
+In file included from /usr/include/rga/im2d.h:24,
+                 from /home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_04_source_v3/tests/stage5_03_rga_probe.cpp:3:
+/usr/include/rga/im2d_type.h:355:16: warning: ISO C++ prohibits anonymous structs [-Wpedantic]
+  355 |         struct {
+      |                ^
