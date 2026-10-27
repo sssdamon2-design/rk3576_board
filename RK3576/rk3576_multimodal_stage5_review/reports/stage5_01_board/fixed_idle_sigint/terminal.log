@@ -1,0 +1,41 @@
+[Init] Loading RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rkllm_sdk/models/Qwen2.5-1.5B-Instruct_RK3576_w4a16.rkllm
+I rkllm: rkllm-toolkit version: 1.2.3, max_context_limit: 4096, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+[Init] Loading SenseVoice...
+[Init] Loading Kokoro...
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: ❓
+[ALSA config] buffer_frames=12000 period_frames=3000 start_threshold=6000 buffer_ms=500
+Camera format: 3840x2160, planes=1
+[Init] Loading SmolVLM2 RKNN + RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[Init] VLM and Camera ready
+[Listen] 120 seconds. Ask ONE short voice question (text or camera).
+[Shutdown] signal=2 stopping capture; draining accepted work
+[ALSA] XRUN=0 Suspends=0 Recoveries=0 RecoveryFailures=0
+[Shutdown] capture/VAD and ASR joined; recognizer destroyed
+[Shutdown] LLM joined; Qwen runtime destroyed
+[Shutdown] TTS joined; playback_xruns=0
+[Shutdown] playback/TTS closed; Camera stopped; VLM destroyed
+[Shutdown] complete signal=2
+
+=== ASR -> LLM -> TTS summary ===
+VAD segments: 0
+ASR recognized: 0
+Audio queue dropped: 0
+LLM accepted/completed/success/failed/rejected: 0/0/0/0/0
+TTS accepted/completed/success/failed/rejected/empty: 0/0/0/0/0/0
+Skipped VISION: 0
+VISION completed/success/failed: 0/0/0
+STOPPED

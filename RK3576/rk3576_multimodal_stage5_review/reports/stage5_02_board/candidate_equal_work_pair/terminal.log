@@ -1,0 +1,63 @@
+[Init] Loading RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rkllm_sdk/models/Qwen2.5-1.5B-Instruct_RK3576_w4a16.rkllm
+I rkllm: rkllm-toolkit version: 1.2.3, max_context_limit: 4096, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+[Init] Loading SenseVoice...
+[Init] Loading Kokoro...
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: ❓
+[ALSA config] buffer_frames=12000 period_frames=3000 start_threshold=6000 buffer_ms=500
+Camera format: 3840x2160, planes=1
+[Init] Loading SmolVLM2 RKNN + RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[Init] VLM and Camera ready
+[Replay ready] controlled text; microphone/VAD/ASR not run
+[InputMode] replay_only NO_MICROPHONE_ASR_OR_VAD_INFERENCE
+[Replay] scheduled_ms=0 source=controlled_text
+
+[ASR->VISION #1] 前面有什么
+[Dispatch] id=1 callback_ms=0.034758
+[Replay] scheduled_ms=1000 source=controlled_text
+
+[ASR->LLM #2] 一加一等于几
+[Dispatch] id=2 callback_ms=0.144342
+[Shutdown] replay input closed; recognizer destroyed
+[VLM done #1] success=true queue_ms=0.087937 disposition=completed frame_id=41 frame_age_ms=9.46606 latency_ms=1921.27
+[VLM Answer #1]  A computer monitor with a blue screen, and a black stand holding it up to the camera.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+
+[LLM #2] 一加一等于二。
+[LLM done #2] success=true queue_ms=920.802 first_text_ms=988.866 latency_ms=1755.51
+[Shutdown] LLM joined; Qwen runtime destroyed
+[ALSA write] submitted_frames=107578 state=RUNNING
+[VISION TTS done #1] success=true queue_ms=0.07144 synth_ms=17670.8 playback_ms=4486.45 asr_text_to_end_ms=24078.8
+[ALSA write] submitted_frames=46803 state=RUNNING
+[TTS done #2] success=true queue_ms=20402 synth_ms=8842.09 audio_sec=1.95013 playback_ms=1984.76 xruns=0 asr_text_to_end_ms=33905.3
+[Shutdown] TTS joined; playback_xruns=0
+[Shutdown] playback/TTS closed; Camera stopped; VLM destroyed
+[Shutdown] complete signal=0
+
+=== ASR -> LLM -> TTS summary ===
+VAD segments: 0
+ASR recognized: 0
+Audio queue dropped: 0
+LLM accepted/completed/success/failed/rejected: 1/1/1/0/0
+TTS accepted/completed/success/failed/rejected/empty: 2/2/2/0/0/0
+Skipped VISION: 0
+VISION completed/success/failed: 1/1/0
+[AudioQueueStats] pushed=0 popped=0 dropped=0 rejected_closed=0 peak=0 pending=0
+[QueueStats] stage=inference generation=1 accepted=2 completed=2 started=2 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=1 pending=0 active=0 callback_errors=0 queue_sum_ms=920.89 queue_max_ms=920.802 service_sum_ms=3676.78
+[QueueStats] stage=tts generation=1 accepted=2 completed=2 started=2 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=1 pending=0 active=0 callback_errors=0 queue_sum_ms=20402 queue_max_ms=20402 service_sum_ms=32984.2
+[PipelineStats] dispatched=2 accepted=2 rejected=0 inflight=0 peak=2 limit=2 vision_accepted=1 vision_rejected=0 llm_cancelled=0 llm_expired=0 vision_cancelled=0 vision_expired=0 cancelled_before_submit=0 downstream_cancelled=0 tts_cancelled=0 tts_expired=0
+PASS

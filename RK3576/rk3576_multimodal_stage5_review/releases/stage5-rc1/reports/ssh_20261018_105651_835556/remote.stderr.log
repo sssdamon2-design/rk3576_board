@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<stdin>", line 34, in <module>
+  File "/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/tools/stage5_05_voice_run.py", line 35, in discover_audio
+    assert len(matches)==1,'expected exactly one HyperX Cloud III'
+           ^^^^^^^^^^^^^^^
+AssertionError: expected exactly one HyperX Cloud III

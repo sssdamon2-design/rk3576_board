@@ -1,0 +1,38 @@
+[  1%] Building CXX object CMakeFiles/multimodal_audio.dir/src/audio/vad_audio_worker.cpp.o
+[  7%] Built target asr_pipeline_tests
+[ 23%] Built target multimodal_core
+[ 28%] Built target audio_preprocessor_tests
+[ 32%] Built target multimodal_camera
+[ 35%] Built target rkllm_worker_smoke
+[ 39%] Built target llm_worker_tests
+[ 45%] Built target camera_service_tests
+[ 50%] Built target rk3576_multimodal
+[ 51%] Linking CXX static library libmultimodal_audio.a
+[ 59%] Built target multimodal_audio
+[ 60%] Linking CXX executable asr_live_smoke
+[ 62%] Linking CXX executable audio_capture_smoke
+[ 64%] Linking CXX executable asr_pipeline_smoke
+[ 65%] Built target audio_capture_smoke
+[ 67%] Built target asr_live_smoke
+[ 68%] Built target asr_pipeline_smoke
+[ 70%] Building CXX object CMakeFiles/asr_vad_smoke.dir/src/audio/asr_vad_smoke.cpp.o
+[ 71%] Building CXX object CMakeFiles/asr_llm_smoke.dir/src/audio/asr_llm_smoke.cpp.o
+[ 73%] Building CXX object CMakeFiles/asr_route_smoke.dir/src/audio/asr_route_smoke.cpp.o
+[ 75%] Linking CXX executable asr_vad_smoke
+[ 75%] Built target asr_vad_smoke
+[ 81%] Built target multimodal_tts
+[ 82%] Linking CXX executable tts_smoke
+[ 84%] Built target tts_smoke
+[ 85%] Linking CXX executable tts_playback_smoke
+[ 87%] Linking CXX executable asr_route_smoke
+[ 89%] Built target tts_playback_smoke
+[ 89%] Built target asr_route_smoke
+[ 90%] Linking CXX executable tts_worker_smoke
+[ 92%] Linking CXX executable tts_worker_queue_smoke
+[ 93%] Built target tts_worker_smoke
+[ 95%] Linking CXX executable asr_llm_smoke
+[ 96%] Built target tts_worker_queue_smoke
+[ 98%] Building CXX object CMakeFiles/asr_llm_tts_smoke.dir/src/audio/asr_llm_tts_smoke.cpp.o
+[ 98%] Built target asr_llm_smoke
+[100%] Linking CXX executable asr_llm_tts_smoke
+[100%] Built target asr_llm_tts_smoke
