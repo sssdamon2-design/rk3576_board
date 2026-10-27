@@ -1,0 +1,24 @@
+Camera format: 3840x2160, planes=1
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[MemoryProbe] sample=0 success=1 frame=29 vlm_ms=1732.12 answer= A computer monitor with a blue screen and some text on it. error=
+[MemoryProbe] sample=1 success=1 frame=82 vlm_ms=1853.35 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[MemoryProbe] sample=2 success=1 frame=138 vlm_ms=1868.05 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[MemoryProbe] sample=3 success=1 frame=195 vlm_ms=1947.44 answer= A computer monitor with a blue screen and some cables attached to it, possibly for an installation or display purposes. error=
+[MemoryProbe] sample=4 success=1 frame=253 vlm_ms=1893.03 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[MemoryProbe] sample=5 success=1 frame=310 vlm_ms=1912.82 answer= A computer monitor with a blue screen and some cables attached to it, possibly for an installation or display purposes. error=
+[MemoryProbe] sample=6 success=1 frame=367 vlm_ms=1952 answer= A computer monitor with a black screen and some cables attached to it, possibly for an installation or display purposes. error=
+[MemoryProbe] sample=7 success=1 frame=426 vlm_ms=1859.12 answer= A computer monitor with a blue screen, and a black stand holding it up to the light. error=
+[MemoryProbe] sample=8 success=1 frame=482 vlm_ms=1703.55 answer= A computer monitor with a blue screen and some text on it. error=
+[MemoryProbe] sample=9 success=1 frame=533 vlm_ms=1751.26 answer= A computer monitor with a blue screen and some cables attached to it. error=
+[MemoryProbe] sample=10 success=1 frame=585 vlm_ms=1909.09 answer= A computer monitor with a blue screen and some cables attached to it, possibly for an installation or display purposes. error=
+[MemoryProbe] sample=11 success=1 frame=643 vlm_ms=1717.92 answer= A computer monitor with a blue screen and some text on it. error=
+[MemoryProbe] stopped fps=29.8983 frames=694 timeouts=0

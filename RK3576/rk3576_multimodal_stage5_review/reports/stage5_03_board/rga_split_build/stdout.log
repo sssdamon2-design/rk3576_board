@@ -1,0 +1,4 @@
+[ 84%] Built target multimodal_core
+[ 92%] Building CXX object CMakeFiles/stage5_03_rga_probe.dir/tests/stage5_03_rga_probe.cpp.o
+[100%] Linking CXX executable stage5_03_rga_probe
+[100%] Built target stage5_03_rga_probe
