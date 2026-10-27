@@ -1,0 +1,28 @@
+﻿# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# CMake build files
+build/
+build-*/
+CMakeFiles/
+CMakeCache.txt
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Sensitive information
+.env
+.env.*
+*.pem
+id_rsa
+id_ed25519
+/RK3576/tts_runtime/models/vits-melo-tts-zh_en/model.int8.onnx
