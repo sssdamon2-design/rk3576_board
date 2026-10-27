@@ -1,0 +1,1326 @@
+[Init] Loading RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rkllm_sdk/models/Qwen2.5-1.5B-Instruct_RK3576_w4a16.rkllm
+I rkllm: rkllm-toolkit version: 1.2.3, max_context_limit: 4096, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+[Init] Loading SenseVoice...
+[Init] Loading Kokoro...
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: ❓
+[ALSA config] buffer_frames=12000 period_frames=3000 start_threshold=6000 buffer_ms=500
+[InputMode] fixed NV12 for replay VLM; Camera still captures independently
+Camera format: 3840x2160, planes=1
+[CameraFormat] width=3840 height=2160 fourcc=842094158 planes=1 colorspace=0 ycbcr_enc=0 quantization=1
+[CameraPlane] plane=0 bytesperline=3840 sizeimage=12441600
+[CameraMap] buffer=0 plane=0 length=12441600
+[CameraMap] buffer=1 plane=0 length=12441600
+[CameraMap] buffer=2 plane=0 length=12441600
+[CameraMap] buffer=3 plane=0 length=12441600
+[Init] Loading SmolVLM2 RKNN + RKLLM...
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[Init] VLM and Camera ready
+[Replay ready] fixed presegmented audio; real ASR, no microphone/VAD
+[InputMode] replay_audio REAL_ASR_NO_MICROPHONE_OR_VAD
+[Replay] scheduled_ms=0 source=fixed_audio
+[ASR] Segment #1: 一加一等于几 | latency=603.736 ms | RTF=0.382596
+
+[ASR->LLM #1] 一加一等于几
+[Dispatch] id=1 callback_ms=0.05475
+
+[LLM #1] 一加一等于二。
+[LLM done #1] success=true queue_ms=0.066322 first_text_ms=450.938 latency_ms=1196.91
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #1] success=true queue_ms=0.149192 synth_ms=8733.77 audio_sec=1.95617 playback_ms=1985.84 xruns=0 asr_text_to_end_ms=11917.3
+[Replay] scheduled_ms=15000 source=fixed_audio
+[ASR] Segment #2: 一加一等于几 | latency=579.98 ms | RTF=0.367541
+
+[ASR->LLM #2] 一加一等于几
+[Dispatch] id=2 callback_ms=0.080521
+
+[LLM #2] 一加一等于二。
+[LLM done #2] success=true queue_ms=0.031727 first_text_ms=133.303 latency_ms=897.32
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #2] success=true queue_ms=0.187949 synth_ms=8690.09 audio_sec=1.95617 playback_ms=1985.54 xruns=0 asr_text_to_end_ms=11573.7
+[Replay] scheduled_ms=30000 source=fixed_audio
+[ASR] Segment #3: 前面有什么 | latency=536.971 ms | RTF=0.396581
+
+[ASR->VISION #3] 前面有什么
+[Dispatch] id=3 callback_ms=0.050524
+[VLM done #3] success=true queue_ms=0.039858 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1743.04
+[VLM Answer #3]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=45000 source=fixed_audio
+[ASR] Segment #4: 前面有什么 | latency=583.603 ms | RTF=0.431021
+
+[ASR->VISION #4] 前面有什么
+[Dispatch] id=4 callback_ms=0.643799
+[VLM done #4] success=true queue_ms=0.035956 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1512.38
+[VLM Answer #4]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80802 state=RUNNING
+[VISION TTS done #3] success=true queue_ms=0.025298 synth_ms=13783.1 playback_ms=3361.25 asr_text_to_end_ms=18887.8
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=60000 source=fixed_audio
+[ASR] Segment #5: 一加一等于几 | latency=630.144 ms | RTF=0.399331
+
+[ASR->LLM #5] 一加一等于几
+[Dispatch] id=5 callback_ms=0.067774
+
+[LLM #5] 一加一等于二。
+[LLM done #5] success=true queue_ms=0.039886 first_text_ms=148.854 latency_ms=947.604
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #4] success=true queue_ms=2327.32 synth_ms=14305.1 playback_ms=3360.51 asr_text_to_end_ms=21505.8
+[Replay] scheduled_ms=75000 source=fixed_audio
+[ASR] Segment #6: 前面有什么 | latency=584.021 ms | RTF=0.43133
+
+[ASR->VISION #6] 前面有什么
+[Dispatch] id=6 callback_ms=0.664636
+[VLM done #6] success=true queue_ms=0.039153 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1535.42
+[VLM Answer #6]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46740 state=RUNNING
+[TTS done #5] success=true queue_ms=5513.81 synth_ms=8798.21 audio_sec=1.9475 playback_ms=1985.47 xruns=0 asr_text_to_end_ms=17245.4
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=90000 source=fixed_audio
+[ASR] Segment #7: 一加一等于几 | latency=652.01 ms | RTF=0.413187
+
+[ASR->LLM #7] 一加一等于几
+[Dispatch] id=7 callback_ms=0.071521
+
+[LLM #7] 一加一等于二。
+[LLM done #7] success=true queue_ms=0.049877 first_text_ms=142.521 latency_ms=867.276
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #6] success=true queue_ms=745.222 synth_ms=14335.1 playback_ms=3361.07 asr_text_to_end_ms=19977.1
+[Replay] scheduled_ms=105000 source=fixed_audio
+[ASR] Segment #8: 一加一等于几 | latency=579.457 ms | RTF=0.36721
+
+[ASR->LLM #8] 一加一等于几
+[Dispatch] id=8 callback_ms=3.79915
+
+[LLM #8] 一[ALSA write] submitted_frames=46924 state=RUNNING
+加一等于二[TTS done #7] success=true queue_ms=4043.67 synth_ms=8708.07 audio_sec=1.95517 playback_ms=1985.44 xruns=0 asr_text_to_end_ms=15604.8
+。
+[LLM done #8] success=true queue_ms=0.02472 first_text_ms=122.484 latency_ms=837.376
+[ALSA write] submitted_frames=46992 state=RUNNING
+[TTS done #8] success=true queue_ms=0.247401 synth_ms=8716.81 audio_sec=1.958 playback_ms=1984.92 xruns=0 asr_text_to_end_ms=11539.8
+[Replay] scheduled_ms=120000 source=fixed_audio
+[ASR] Segment #9: 前面有什么 | latency=536.683 ms | RTF=0.396368
+
+[ASR->VISION #9] 前面有什么
+[Dispatch] id=9 callback_ms=0.606568
+[VLM done #9] success=true queue_ms=0.034701 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1504.59
+[VLM Answer #9]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=135000 source=fixed_audio
+[ASR] Segment #10: 前面有什么 | latency=611.381 ms | RTF=0.451537
+
+[ASR->VISION #10] 前面有什么
+[Dispatch] id=10 callback_ms=0.648139
+[VLM done #10] success=true queue_ms=0.032776 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1522.31
+[VLM Answer #10]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80753 state=RUNNING
+[VISION TTS done #9] success=true queue_ms=0.070514 synth_ms=13694.7 playback_ms=3361.96 asr_text_to_end_ms=18561.5
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=150000 source=fixed_audio
+[ASR] Segment #11: 一加一等于几 | latency=670.984 ms | RTF=0.425212
+
+[ASR->LLM #11] 一加一等于几
+[Dispatch] id=11 callback_ms=0.059577
+
+[LLM #11] 一加一等于二。
+[LLM done #11] success=true queue_ms=0.039972 first_text_ms=150.039 latency_ms=876.866
+[ALSA write] submitted_frames=80751 state=RUNNING
+[VISION TTS done #10] success=true queue_ms=1970.68 synth_ms=14303.5 playback_ms=3360.66 asr_text_to_end_ms=21157.5
+[Replay] scheduled_ms=165000 source=fixed_audio
+[ASR] Segment #12: 前面有什么 | latency=611.315 ms | RTF=0.451488
+
+[ASR->VISION #12] 前面有什么
+[Dispatch] id=12 callback_ms=0.040719
+[ALSA write] submitted_frames=46992 state=RUNNING
+[VLM done #12] success=true queue_ms=0.027751 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1503.44
+[VLM Answer #12]  A computer monitor with a blue screen and some text on it.
+[TTS done #11] success=true queue_ms=5202.68 synth_ms=8794.74 audio_sec=1.958 playback_ms=1984.73 xruns=0 asr_text_to_end_ms=16859.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=180000 source=fixed_audio
+[ASR] Segment #13: 一加一等于几 | latency=681.778 ms | RTF=0.432052
+
+[ASR->LLM #13] 一加一等于几
+[Dispatch] id=13 callback_ms=0.703986
+
+[LLM #13] 一加一等于二。
+[LLM done #13] success=true queue_ms=0.033709 first_text_ms=169.197 latency_ms=921.679
+[ALSA write] submitted_frames=80763 state=RUNNING
+[VISION TTS done #12] success=true queue_ms=425.72 synth_ms=14714.7 playback_ms=3360.43 asr_text_to_end_ms=20004.6
+[Replay] scheduled_ms=195000 source=fixed_audio
+[ASR] Segment #14: 一加一等于几 | latency=582.745 ms | RTF=0.369293
+
+[ASR->LLM #14] 一加一等于几
+[Dispatch] id=14 callback_ms=0.754492
+
+[LLM #14] 一加一[ALSA write] submitted_frames=46712 state=RUNNING
+等于二。
+[LLM done #14] success=true queue_ms=0.027366 first_text_ms=128.373 latency_ms=890.779
+[TTS done #13] success=true queue_ms=4013.56 synth_ms=8882.02 audio_sec=1.94633 playback_ms=1984.54 xruns=0 asr_text_to_end_ms=15802.1
+[ALSA write] submitted_frames=46946 state=RUNNING
+[TTS done #14] success=true queue_ms=4.27118 synth_ms=8840.74 audio_sec=1.95608 playback_ms=1985.44 xruns=0 asr_text_to_end_ms=11721.5
+[Replay] scheduled_ms=210000 source=fixed_audio
+[ASR] Segment #15: 前面有什么 | latency=529.627 ms | RTF=0.391157
+
+[ASR->VISION #15] 前面有什么
+[Dispatch] id=15 callback_ms=0.742215
+[VLM done #15] success=true queue_ms=0.033898 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1526.8
+[VLM Answer #15]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=225000 source=fixed_audio
+[ASR] Segment #16: 前面有什么 | latency=626.407 ms | RTF=0.462634
+
+[ASR->VISION #16] 前面有什么
+[Dispatch] id=16 callback_ms=0.098214
+[VLM done #16] success=true queue_ms=0.077484 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1529.33
+[VLM Answer #16]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80696 state=RUNNING
+[VISION TTS done #15] success=true queue_ms=0.032267 synth_ms=13679.8 playback_ms=3360.96 asr_text_to_end_ms=18567.8
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=240000 source=fixed_audio
+[ASR] Segment #17: 一加一等于几 | latency=680.007 ms | RTF=0.43093
+
+[ASR->LLM #17] 一加一等于几
+[Dispatch] id=17 callback_ms=0.062515
+
+[LLM #17] 一加一等于二。
+[LLM done #17] success=true queue_ms=0.038798 first_text_ms=179.647 latency_ms=944.298
+[ALSA write] submitted_frames=80750 state=RUNNING
+[VISION TTS done #16] success=true queue_ms=1948.22 synth_ms=14332.1 playback_ms=3360.66 asr_text_to_end_ms=21170.8
+[Replay] scheduled_ms=255000 source=fixed_audio
+[ASR] Segment #18: 前面有什么 | latency=629.032 ms | RTF=0.464573
+
+[ASR->VISION #18] 前面有什么
+[Dispatch] id=18 callback_ms=0.051779
+[ALSA write] submitted_frames=46952 state=RUNNING
+[VLM done #18] success=true queue_ms=0.038101 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1522.36
+[VLM Answer #18]  A computer monitor with a blue screen and some text on it.
+[TTS done #17] success=true queue_ms=5170.97 synth_ms=8833.74 audio_sec=1.95633 playback_ms=1984.88 xruns=0 asr_text_to_end_ms=16934.4
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=270000 source=fixed_audio
+[ASR] Segment #19: 一加一等于几 | latency=695.807 ms | RTF=0.440942
+
+[ASR->LLM #19] 一加一等于几
+[Dispatch] id=19 callback_ms=0.059215
+
+[LLM #19] 一加一等于二。
+[LLM done #19] success=true queue_ms=0.039229 first_text_ms=152.388 latency_ms=1002.89
+[ALSA write] submitted_frames=80753 state=RUNNING
+[VISION TTS done #18] success=true queue_ms=459.538 synth_ms=14371.1 playback_ms=3360.39 asr_text_to_end_ms=19713.7
+[Replay] scheduled_ms=285000 source=fixed_audio
+[ASR] Segment #20: 一加一等于几 | latency=587.179 ms | RTF=0.372103
+
+[ASR->LLM #20] 一加一等于几
+[Dispatch] id=20 callback_ms=0.051604
+
+[LLM #20] 一[ALSA write] submitted_frames=46993 state=RUNNING
+加一等于二。[TTS done #19] success=true queue_ms=3644.63 synth_ms=8992.5 audio_sec=1.95804 playback_ms=1985.64 xruns=0 asr_text_to_end_ms=15626
+
+[LLM done #20] success=true queue_ms=0.030593 first_text_ms=125.848 latency_ms=841.976
+[ALSA write] submitted_frames=46803 state=RUNNING
+[TTS done #20] success=true queue_ms=0.288829 synth_ms=8724.95 audio_sec=1.95013 playback_ms=1985.38 xruns=0 asr_text_to_end_ms=11553.2
+[Replay] scheduled_ms=300000 source=fixed_audio
+[ASR] Segment #21: 前面有什么 | latency=534.775 ms | RTF=0.394959
+
+[ASR->VISION #21] 前面有什么
+[Dispatch] id=21 callback_ms=2.89064
+[VLM done #21] success=true queue_ms=0.032966 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1524.91
+[VLM Answer #21]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=315000 source=fixed_audio
+[ASR] Segment #22: 前面有什么 | latency=636.138 ms | RTF=0.469821
+
+[ASR->VISION #22] 前面有什么
+[Dispatch] id=22 callback_ms=0.053515
+[VLM done #22] success=true queue_ms=0.039213 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1503.32
+[VLM Answer #22]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80751 state=RUNNING
+[VISION TTS done #21] success=true queue_ms=0.031247 synth_ms=13718.3 playback_ms=3359.95 asr_text_to_end_ms=18603.4
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=330000 source=fixed_audio
+[ASR] Segment #23: 一加一等于几 | latency=697.152 ms | RTF=0.441795
+
+[ASR->LLM #23] 一加一等于几
+[Dispatch] id=23 callback_ms=0.061959
+
+[LLM #23] 一加一等于二。
+[LLM done #23] success=true queue_ms=0.038787 first_text_ms=146.259 latency_ms=1091.98
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #22] success=true queue_ms=2003.34 synth_ms=14514.4 playback_ms=3360.74 asr_text_to_end_ms=21382.2
+[Replay] scheduled_ms=345000 source=fixed_audio
+[ASR] Segment #24: 前面有什么 | latency=634.052 ms | RTF=0.468281
+
+[ASR->VISION #24] 前面有什么
+[Dispatch] id=24 callback_ms=0.066651
+[VLM done #24] success=true queue_ms=0.052435 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1559.77
+[VLM Answer #24]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46993 state=RUNNING
+[TTS done #23] success=true queue_ms=5238.51 synth_ms=9189.99 audio_sec=1.95804 playback_ms=1984.92 xruns=0 asr_text_to_end_ms=17505.8
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=360000 source=fixed_audio
+[ASR] Segment #25: 一加一等于几 | latency=710.414 ms | RTF=0.450199
+
+[ASR->LLM #25] 一加一等于几
+[Dispatch] id=25 callback_ms=0.063207
+
+[LLM #25] 一加一等于二。
+[LLM done #25] success=true queue_ms=0.039234 first_text_ms=178.245 latency_ms=996.565
+[ALSA write] submitted_frames=80748 state=RUNNING
+[VISION TTS done #24] success=true queue_ms=1003.72 synth_ms=14797.1 playback_ms=3360.37 asr_text_to_end_ms=20721.3
+[Replay] scheduled_ms=375000 source=fixed_audio
+[ASR] Segment #26: 一加一等于几 | latency=660.727 ms | RTF=0.418712
+
+[ASR->LLM #26] 一加一等于几
+[Dispatch] id=26 callback_ms=0.576264
+
+[LLM #26] 一加一等于二。
+[LLM done #26] success=true queue_ms=0.028886 first_text_ms=145.426 latency_ms=867.773
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #25] success=true queue_ms=4644.26 synth_ms=9085.68 audio_sec=1.95621 playback_ms=1985.61 xruns=0 asr_text_to_end_ms=16712.5
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #26] success=true queue_ms=902 synth_ms=8754.51 audio_sec=1.95617 playback_ms=1985.16 xruns=0 asr_text_to_end_ms=12509.8
+[Replay] scheduled_ms=390000 source=fixed_audio
+[ASR] Segment #27: 前面有什么 | latency=542.428 ms | RTF=0.400612
+
+[ASR->VISION #27] 前面有什么
+[Dispatch] id=27 callback_ms=0.594052
+[VLM done #27] success=true queue_ms=0.048335 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1485.08
+[VLM Answer #27]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=405000 source=fixed_audio
+[ASR] Segment #28: 前面有什么 | latency=652.46 ms | RTF=0.481876
+
+[ASR->VISION #28] 前面有什么
+[Dispatch] id=28 callback_ms=0.067606
+[VLM done #28] success=true queue_ms=0.038966 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1521.65
+[VLM Answer #28]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80757 state=RUNNING
+[VISION TTS done #27] success=true queue_ms=0.083444 synth_ms=13765.7 playback_ms=3362.85 asr_text_to_end_ms=18614
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=420000 source=fixed_audio
+[ASR] Segment #29: 一加一等于几 | latency=710.571 ms | RTF=0.450299
+
+[ASR->LLM #29] 一加一等于几
+[Dispatch] id=29 callback_ms=0.113772
+
+[LLM #29] 一加一等于二。
+[LLM done #29] success=true queue_ms=0.04383 first_text_ms=201.692 latency_ms=1008.83
+[ALSA write] submitted_frames=80838 state=RUNNING
+[VISION TTS done #28] success=true queue_ms=1993.88 synth_ms=14404.3 playback_ms=3362.55 asr_text_to_end_ms=21282.8
+[Replay] scheduled_ms=435000 source=fixed_audio
+[ASR] Segment #30: 前面有什么 | latency=650.768 ms | RTF=0.480626
+
+[ASR->VISION #30] 前面有什么
+[Dispatch] id=30 callback_ms=0.063725
+[VLM done #30] success=true queue_ms=0.047028 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1525.79
+[VLM Answer #30]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #29] success=true queue_ms=5202.24 synth_ms=8843.17 audio_sec=1.95617 playback_ms=1985.14 xruns=0 asr_text_to_end_ms=17039.7
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=450000 source=fixed_audio
+[ASR] Segment #31: 一加一等于几 | latency=727.944 ms | RTF=0.461308
+
+[ASR->LLM #31] 一加一等于几
+[Dispatch] id=31 callback_ms=0.106556
+
+[LLM #31] 一加一等于二。
+[LLM done #31] success=true queue_ms=0.047942 first_text_ms=146.642 latency_ms=1007.28
+[ALSA write] submitted_frames=80757 state=RUNNING
+[VISION TTS done #30] success=true queue_ms=586.668 synth_ms=14430.2 playback_ms=3361.19 asr_text_to_end_ms=19904.3
+[Replay] scheduled_ms=465000 source=fixed_audio
+[ASR] Segment #32: 一加一等于几 | latency=582.927 ms | RTF=0.369409
+
+[ASR->LLM #32] 一加一等于几
+[Dispatch] id=32 callback_ms=0.048103
+
+[LLM #32] 一加一[ALSA write] submitted_frames=46739 state=RUNNING
+等于二。
+[LLM done #32] success=true queue_ms=0.026813 first_text_ms=134.183 latency_ms=846.076
+[TTS done #31] success=true queue_ms=3821.8 synth_ms=8933.28 audio_sec=1.94746 playback_ms=1984.92 xruns=0 asr_text_to_end_ms=15747.6
+[ALSA write] submitted_frames=46803 state=RUNNING
+[TTS done #32] success=true queue_ms=31.5498 synth_ms=8742.97 audio_sec=1.95013 playback_ms=1984.8 xruns=0 asr_text_to_end_ms=11605.7
+[Replay] scheduled_ms=480000 source=fixed_audio
+[ASR] Segment #33: 前面有什么 | latency=535.847 ms | RTF=0.395751
+
+[ASR->VISION #33] 前面有什么
+[Dispatch] id=33 callback_ms=0.086264
+[VLM done #33] success=true queue_ms=0.041315 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1529.96
+[VLM Answer #33]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=495000 source=fixed_audio
+[ASR] Segment #34: 前面有什么 | latency=659.416 ms | RTF=0.487013
+
+[ASR->VISION #34] 前面有什么
+[Dispatch] id=34 callback_ms=0.068233
+[VLM done #34] success=true queue_ms=0.042163 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1525.2
+[VLM Answer #34]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #33] success=true queue_ms=0.032419 synth_ms=13739.6 playback_ms=3360.37 asr_text_to_end_ms=18630.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=510000 source=fixed_audio
+[ASR] Segment #35: 一加一等于几 | latency=725.443 ms | RTF=0.459723
+
+[ASR->LLM #35] 一加一等于几
+[Dispatch] id=35 callback_ms=0.064443
+
+[LLM #35] 一加一等于二。
+[LLM done #35] success=true queue_ms=0.037393 first_text_ms=178.301 latency_ms=989.055
+[ALSA write] submitted_frames=80750 state=RUNNING
+[VISION TTS done #34] success=true queue_ms=1984.14 synth_ms=14555.1 playback_ms=3360.57 asr_text_to_end_ms=21425.4
+[Replay] scheduled_ms=525000 source=fixed_audio
+[ASR] Segment #36: 前面有什么 | latency=652.731 ms | RTF=0.482076
+
+[ASR->VISION #36] 前面有什么
+[Dispatch] id=36 callback_ms=0.063122
+[VLM done #36] success=true queue_ms=0.051227 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1544.47
+[VLM Answer #36]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #35] success=true queue_ms=5371.69 synth_ms=9227.4 audio_sec=1.95617 playback_ms=1985.71 xruns=0 asr_text_to_end_ms=17574.2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=540000 source=fixed_audio
+[ASR] Segment #37: 一加一等于几 | latency=735.532 ms | RTF=0.466117
+
+[ASR->LLM #37] 一加一等于几
+[Dispatch] id=37 callback_ms=0.069769
+
+[LLM #37] 一加一等于二。
+[LLM done #37] success=true queue_ms=0.043157 first_text_ms=152.742 latency_ms=1014.6
+[ALSA write] submitted_frames=80688 state=RUNNING
+[VISION TTS done #36] success=true queue_ms=1102.94 synth_ms=14501.2 playback_ms=3360.54 asr_text_to_end_ms=20509.5
+[Replay] scheduled_ms=555000 source=fixed_audio
+[ASR] Segment #38: 一加一等于几 | latency=616.703 ms | RTF=0.390813
+
+[ASR->LLM #38] 一加一等于几
+[Dispatch] id=38 callback_ms=0.043329
+
+[LLM #38] 一加一等于二。
+[LLM done #38] success=true queue_ms=0.078951 first_text_ms=141.646 latency_ms=875.249
+[ALSA write] submitted_frames=46712 state=RUNNING
+[TTS done #37] success=true queue_ms=4400.66 synth_ms=9052.26 audio_sec=1.94633 playback_ms=1985.38 xruns=0 asr_text_to_end_ms=16453.3
+[ALSA write] submitted_frames=46947 state=RUNNING
+[TTS done #38] success=true queue_ms=697.093 synth_ms=9022.59 audio_sec=1.95612 playback_ms=1985.63 xruns=0 asr_text_to_end_ms=12580.9
+[Replay] scheduled_ms=570000 source=fixed_audio
+[ASR] Segment #39: 前面有什么 | latency=537.53 ms | RTF=0.396994
+
+[ASR->VISION #39] 前面有什么
+[Dispatch] id=39 callback_ms=0.048875
+[VLM done #39] success=true queue_ms=0.03286 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1507.76
+[VLM Answer #39]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=585000 source=fixed_audio
+[ASR] Segment #40: 前面有什么 | latency=678.586 ms | RTF=0.501172
+
+[ASR->VISION #40] 前面有什么
+[Dispatch] id=40 callback_ms=0.070786
+[VLM done #40] success=true queue_ms=0.050293 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1503.45
+[VLM Answer #40]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #39] success=true queue_ms=0.026183 synth_ms=14022.9 playback_ms=3360.24 asr_text_to_end_ms=18891.2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=600000 source=fixed_audio
+[ASR] Segment #41: 一加一等于几 | latency=734.195 ms | RTF=0.46527
+
+[ASR->LLM #41] 一加一等于几
+[Dispatch] id=41 callback_ms=0.07181
+
+[LLM #41] 一加一等于二。
+[LLM done #41] success=true queue_ms=0.044308 first_text_ms=156.196 latency_ms=997.555
+[ALSA write] submitted_frames=80715 state=RUNNING
+[VISION TTS done #40] success=true queue_ms=2243.78 synth_ms=14598.2 playback_ms=3360.42 asr_text_to_end_ms=21706.2
+[Replay] scheduled_ms=615000 source=fixed_audio
+[ASR] Segment #42: 前面有什么 | latency=658.038 ms | RTF=0.485996
+
+[ASR->VISION #42] 前面有什么
+[Dispatch] id=42 callback_ms=0.101088
+[VLM done #42] success=true queue_ms=0.052489 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1638.71
+[VLM Answer #42]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46952 state=RUNNING
+[TTS done #41] success=true queue_ms=5649.37 synth_ms=9310.79 audio_sec=1.95633 playback_ms=1985.24 xruns=0 asr_text_to_end_ms=17943.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=630000 source=fixed_audio
+[ASR] Segment #43: 一加一等于几 | latency=742.861 ms | RTF=0.470761
+
+[ASR->LLM #43] 一加一等于几
+[Dispatch] id=43 callback_ms=0.068801
+
+[LLM #43] 一加一等于二。
+[LLM done #43] success=true queue_ms=0.040643 first_text_ms=203.16 latency_ms=932.638
+[ALSA write] submitted_frames=80752 state=RUNNING
+[VISION TTS done #42] success=true queue_ms=1392.24 synth_ms=14432.9 playback_ms=3360.86 asr_text_to_end_ms=20825.1
+[Replay] scheduled_ms=645000 source=fixed_audio
+[ASR] Segment #44: 一加一等于几 | latency=638.881 ms | RTF=0.404868
+
+[ASR->LLM #44] 一加一等于几
+[Dispatch] id=44 callback_ms=0.636053
+
+[LLM #44] 一加一等于二。
+[LLM done #44] success=true queue_ms=0.029598 first_text_ms=127.332 latency_ms=842.879
+[ALSA write] submitted_frames=46739 state=RUNNING
+[TTS done #43] success=true queue_ms=4805.45 synth_ms=8819.18 audio_sec=1.94746 playback_ms=1985.71 xruns=0 asr_text_to_end_ms=16543.3
+[ALSA write] submitted_frames=46923 state=RUNNING
+[TTS done #44] success=true queue_ms=800.602 synth_ms=8721.89 audio_sec=1.95513 playback_ms=1985.03 xruns=0 asr_text_to_end_ms=12350.8
+[Replay] scheduled_ms=660000 source=fixed_audio
+[ASR] Segment #45: 前面有什么 | latency=538.156 ms | RTF=0.397456
+
+[ASR->VISION #45] 前面有什么
+[Dispatch] id=45 callback_ms=0.04243
+[VLM done #45] success=true queue_ms=0.085308 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1518.61
+[VLM Answer #45]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=675000 source=fixed_audio
+[ASR] Segment #46: 前面有什么 | latency=678.351 ms | RTF=0.500998
+
+[ASR->VISION #46] 前面有什么
+[Dispatch] id=46 callback_ms=0.101077
+[VLM done #46] success=true queue_ms=0.044337 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1540.97
+[VLM Answer #46]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80757 state=RUNNING
+[VISION TTS done #45] success=true queue_ms=0.085246 synth_ms=13734 playback_ms=3362.11 asr_text_to_end_ms=18615.1
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=690000 source=fixed_audio
+[ASR] Segment #47: 一加一等于几 | latency=739.395 ms | RTF=0.468565
+
+[ASR->LLM #47] 一加一等于几
+[Dispatch] id=47 callback_ms=0.069561
+
+[LLM #47] 一加一等于二。
+[LLM done #47] success=true queue_ms=0.041344 first_text_ms=156.736 latency_ms=1004.47
+[ALSA write] submitted_frames=80748 state=RUNNING
+[VISION TTS done #46] success=true queue_ms=1940.21 synth_ms=14556.6 playback_ms=3360.27 asr_text_to_end_ms=21398.5
+[Replay] scheduled_ms=705000 source=fixed_audio
+[ASR] Segment #48: 前面有什么 | latency=668.386 ms | RTF=0.493638
+
+[ASR->VISION #48] 前面有什么
+[Dispatch] id=48 callback_ms=0.08062
+[VLM done #48] success=true queue_ms=0.050364 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1600.98
+[VLM Answer #48]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46993 state=RUNNING
+[TTS done #47] success=true queue_ms=5331.13 synth_ms=9267.65 audio_sec=1.95804 playback_ms=1985.75 xruns=0 asr_text_to_end_ms=17589.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=720000 source=fixed_audio
+[ASR] Segment #49: 一加一等于几 | latency=745.38 ms | RTF=0.472357
+
+[ASR->LLM #49] 一加一等于几
+[Dispatch] id=49 callback_ms=0.096073
+
+[LLM #49] 一加一等于二。
+[LLM done #49] success=true queue_ms=0.042636 first_text_ms=165.871 latency_ms=945.8
+[ALSA write] submitted_frames=80743 state=RUNNING
+[VISION TTS done #48] success=true queue_ms=1072.37 synth_ms=14428.2 playback_ms=3360.09 asr_text_to_end_ms=20462
+[Replay] scheduled_ms=735000 source=fixed_audio
+[ASR] Segment #50: 一加一等于几 | latency=586.018 ms | RTF=0.371368
+
+[ASR->LLM #50] 一加一等于几
+[Dispatch] id=50 callback_ms=0.048382
+
+[LLM #50] 一加一等于二[ALSA write] submitted_frames=46713 state=RUNNING
+。
+[LLM done #50] success=true queue_ms=0.08 first_text_ms=158.765 latency_ms=891.319
+[TTS done #49] success=true queue_ms=4422.23 synth_ms=8737.77 audio_sec=1.94637 playback_ms=1985.36 xruns=0 asr_text_to_end_ms=16091.4
+[ALSA write] submitted_frames=46740 state=RUNNING
+[TTS done #50] success=true queue_ms=370.421 synth_ms=8759.16 audio_sec=1.9475 playback_ms=1985.56 xruns=0 asr_text_to_end_ms=12007
+[Replay] scheduled_ms=750000 source=fixed_audio
+[ASR] Segment #51: 前面有什么 | latency=542.333 ms | RTF=0.400541
+
+[ASR->VISION #51] 前面有什么
+[Dispatch] id=51 callback_ms=0.049042
+[VLM done #51] success=true queue_ms=0.042934 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1525.24
+[VLM Answer #51]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=765000 source=fixed_audio
+[ASR] Segment #52: 前面有什么 | latency=682.418 ms | RTF=0.504001
+
+[ASR->VISION #52] 前面有什么
+[Dispatch] id=52 callback_ms=0.096541
+[VLM done #52] success=true queue_ms=0.045134 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1529.69
+[VLM Answer #52]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80748 state=RUNNING
+[VISION TTS done #51] success=true queue_ms=0.023343 synth_ms=13778.2 playback_ms=3361.43 asr_text_to_end_ms=18665.1
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=780000 source=fixed_audio
+[ASR] Segment #53: 一加一等于几 | latency=742.213 ms | RTF=0.47035
+
+[ASR->LLM #53] 一加一等于几
+[Dispatch] id=53 callback_ms=0.06337
+
+[LLM #53] 一加一等于二。
+[LLM done #53] success=true queue_ms=0.044521 first_text_ms=164.179 latency_ms=976.683
+[ALSA write] submitted_frames=80752 state=RUNNING
+[VISION TTS done #52] success=true queue_ms=2001.94 synth_ms=14430.2 playback_ms=3360.59 asr_text_to_end_ms=21322.7
+[Replay] scheduled_ms=795000 source=fixed_audio
+[ASR] Segment #54: 前面有什么 | latency=670.26 ms | RTF=0.495022
+
+[ASR->VISION #54] 前面有什么
+[Dispatch] id=54 callback_ms=0.095021
+[VLM done #54] success=true queue_ms=0.071515 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1593.75
+[VLM Answer #54]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46992 state=RUNNING
+[TTS done #53] success=true queue_ms=5285.71 synth_ms=9229.01 audio_sec=1.958 playback_ms=1984.84 xruns=0 asr_text_to_end_ms=17476.5
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=810000 source=fixed_audio
+[ASR] Segment #55: 一加一等于几 | latency=744.099 ms | RTF=0.471546
+
+[ASR->LLM #55] 一加一等于几
+[Dispatch] id=55 callback_ms=0.099828
+
+[LLM #55] 一加一等于二。
+[LLM done #55] success=true queue_ms=0.045429 first_text_ms=162.534 latency_ms=939.279
+[ALSA write] submitted_frames=80693 state=RUNNING
+[VISION TTS done #54] success=true queue_ms=961.638 synth_ms=14472.7 playback_ms=3360.47 asr_text_to_end_ms=20388.9
+[Replay] scheduled_ms=825000 source=fixed_audio
+[ASR] Segment #56: 一加一等于几 | latency=584.633 ms | RTF=0.37049
+
+[ASR->LLM #56] 一加一等于几
+[Dispatch] id=56 callback_ms=0.043257
+
+[LLM #56] 一加一等于二[ALSA write] submitted_frames=46952 state=RUNNING
+。
+[LLM done #56] success=true queue_ms=0.07207 first_text_ms=144.276 latency_ms=877.407
+[TTS done #55] success=true queue_ms=4362.45 synth_ms=8787.11 audio_sec=1.95633 playback_ms=1984.69 xruns=0 asr_text_to_end_ms=16073.9
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #56] success=true queue_ms=351.625 synth_ms=8729.85 audio_sec=1.95621 playback_ms=1984.87 xruns=0 asr_text_to_end_ms=11944.3
+[Replay] scheduled_ms=840000 source=fixed_audio
+[ASR] Segment #57: 前面有什么 | latency=534.641 ms | RTF=0.39486
+
+[ASR->VISION #57] 前面有什么
+[Dispatch] id=57 callback_ms=0.052905
+[VLM done #57] success=true queue_ms=0.041913 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1494.43
+[VLM Answer #57]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=855000 source=fixed_audio
+[ASR] Segment #58: 前面有什么 | latency=681.49 ms | RTF=0.503316
+
+[ASR->VISION #58] 前面有什么
+[Dispatch] id=58 callback_ms=0.062432
+[VLM done #58] success=true queue_ms=0.038883 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1518.16
+[VLM Answer #58]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80787 state=RUNNING
+[VISION TTS done #57] success=true queue_ms=0.049978 synth_ms=13778.9 playback_ms=3360.78 asr_text_to_end_ms=18634.5
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=870000 source=fixed_audio
+[ASR] Segment #59: 一加一等于几 | latency=739.052 ms | RTF=0.468347
+
+[ASR->LLM #59] 一加一等于几
+[Dispatch] id=59 callback_ms=0.175412
+
+[LLM #59] 一加一等于二。
+[LLM done #59] success=true queue_ms=0.042332 first_text_ms=157.36 latency_ms=949.454
+[ALSA write] submitted_frames=80696 state=RUNNING
+[VISION TTS done #58] success=true queue_ms=1961.59 synth_ms=14429.6 playback_ms=3360.14 asr_text_to_end_ms=21269.8
+[Replay] scheduled_ms=885000 source=fixed_audio
+[ASR] Segment #60: 前面有什么 | latency=679.293 ms | RTF=0.501694
+
+[ASR->VISION #60] 前面有什么
+[Dispatch] id=60 callback_ms=0.093991
+[VLM done #60] success=true queue_ms=0.044143 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1516
+[VLM Answer #60]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #59] success=true queue_ms=5264.08 synth_ms=8889.46 audio_sec=1.95617 playback_ms=1985.39 xruns=0 asr_text_to_end_ms=17088.7
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=900000 source=fixed_audio
+[ASR] Segment #61: 一加一等于几 | latency=741.947 ms | RTF=0.470182
+
+[ASR->LLM #61] 一加一等于几
+[Dispatch] id=61 callback_ms=0.073471
+
+[LLM #61] 一加一等于二。
+[LLM done #61] success=true queue_ms=0.044381 first_text_ms=182.065 latency_ms=1171.21
+[ALSA write] submitted_frames=81197 state=RUNNING
+[VISION TTS done #60] success=true queue_ms=643.122 synth_ms=14525 playback_ms=3485.74 asr_text_to_end_ms=20170.1
+[Replay] scheduled_ms=915000 source=fixed_audio
+[ASR] Segment #62: 一加一等于几 | latency=585.515 ms | RTF=0.371049
+
+[ASR->LLM #62] 一加一等于几
+[Dispatch] id=62 callback_ms=0.047895
+
+[LLM #62] 一加一等于[ALSA write] submitted_frames=46712 state=RUNNING
+二。
+[LLM done #62] success=true queue_ms=0.078398 first_text_ms=125.721 latency_ms=844.806
+[TTS done #61] success=true queue_ms=3925.16 synth_ms=8781.77 audio_sec=1.94633 playback_ms=1985.32 xruns=0 asr_text_to_end_ms=15863.8
+[ALSA write] submitted_frames=46811 state=RUNNING
+[TTS done #62] success=true queue_ms=173.84 synth_ms=8756.07 audio_sec=1.95046 playback_ms=1985.56 xruns=0 asr_text_to_end_ms=11760.7
+[Replay] scheduled_ms=930000 source=fixed_audio
+[ASR] Segment #63: 前面有什么 | latency=537.226 ms | RTF=0.39677
+
+[ASR->VISION #63] 前面有什么
+[Dispatch] id=63 callback_ms=0.041443
+[VLM done #63] success=true queue_ms=0.085098 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1492
+[VLM Answer #63]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=945000 source=fixed_audio
+[ASR] Segment #64: 前面有什么 | latency=680.461 ms | RTF=0.502556
+
+[ASR->VISION #64] 前面有什么
+[Dispatch] id=64 callback_ms=0.068599
+[VLM done #64] success=true queue_ms=0.041488 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1543.13
+[VLM Answer #64]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80748 state=RUNNING
+[VISION TTS done #63] success=true queue_ms=0.029827 synth_ms=13786.3 playback_ms=3359.82 asr_text_to_end_ms=18638.5
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=960000 source=fixed_audio
+[ASR] Segment #65: 一加一等于几 | latency=732.436 ms | RTF=0.464154
+
+[ASR->LLM #65] 一加一等于几
+[Dispatch] id=65 callback_ms=0.067199
+
+[LLM #65] 一加一等于二。
+[LLM done #65] success=true queue_ms=0.036944 first_text_ms=206.893 latency_ms=1241.23
+[ALSA write] submitted_frames=80798 state=RUNNING
+[VISION TTS done #64] success=true queue_ms=1960.84 synth_ms=15182.6 playback_ms=3360.37 asr_text_to_end_ms=22047.3
+[Replay] scheduled_ms=975000 source=fixed_audio
+[ASR] Segment #66: 前面有什么 | latency=672.23 ms | RTF=0.496477
+
+[ASR->VISION #66] 前面有什么
+[Dispatch] id=66 callback_ms=0.068254
+[VLM done #66] success=true queue_ms=0.043747 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1554.67
+[VLM Answer #66]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #65] success=true queue_ms=5738.32 synth_ms=9119.44 audio_sec=1.95621 playback_ms=1985.52 xruns=0 asr_text_to_end_ms=18084.8
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=990000 source=fixed_audio
+[ASR] Segment #67: 一加一等于几 | latency=740.038 ms | RTF=0.468972
+
+[ASR->LLM #67] 一加一等于几
+[Dispatch] id=67 callback_ms=0.098683
+
+[LLM #67] 一加一等于二。
+[LLM done #67] success=true queue_ms=0.043461 first_text_ms=209.541 latency_ms=1114.8
+[ALSA write] submitted_frames=80799 state=RUNNING
+[VISION TTS done #66] success=true queue_ms=1597.61 synth_ms=14592.1 playback_ms=3360.59 asr_text_to_end_ms=21105.3
+[Replay] scheduled_ms=1005000 source=fixed_audio
+[ASR] Segment #68: 一加一等于几 | latency=739.527 ms | RTF=0.468649
+
+[ASR->LLM #68] 一加一等于几
+[Dispatch] id=68 callback_ms=0.071909
+
+[LLM #68] 一加一等于二。
+[LLM done #68] success=true queue_ms=0.045901 first_text_ms=147.095 latency_ms=903.061
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #67] success=true queue_ms=4916.97 synth_ms=9597.14 audio_sec=1.95621 playback_ms=1985.81 xruns=0 asr_text_to_end_ms=17615.1
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #68] success=true queue_ms=1724.2 synth_ms=9038.54 audio_sec=1.95617 playback_ms=1985.33 xruns=0 asr_text_to_end_ms=13651.4
+[Replay] scheduled_ms=1020000 source=fixed_audio
+[ASR] Segment #69: 前面有什么 | latency=529.627 ms | RTF=0.391158
+
+[ASR->VISION #69] 前面有什么
+[Dispatch] id=69 callback_ms=0.040862
+[VLM done #69] success=true queue_ms=0.084564 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1531.05
+[VLM Answer #69]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1035000 source=fixed_audio
+[ASR] Segment #70: 前面有什么 | latency=690.973 ms | RTF=0.51032
+
+[ASR->VISION #70] 前面有什么
+[Dispatch] id=70 callback_ms=0.675381
+[VLM done #70] success=true queue_ms=0.038734 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1497.71
+[VLM Answer #70]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80694 state=RUNNING
+[VISION TTS done #69] success=true queue_ms=0.028481 synth_ms=13780.6 playback_ms=3360.09 asr_text_to_end_ms=18672
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1050000 source=fixed_audio
+[ASR] Segment #71: 一加一等于几 | latency=721.63 ms | RTF=0.457307
+
+[ASR->LLM #71] 一加一等于几
+[Dispatch] id=71 callback_ms=0.070271
+
+[LLM #71] 一加一等于二。
+[LLM done #71] success=true queue_ms=0.048308 first_text_ms=193.057 latency_ms=1117.59
+[ALSA write] submitted_frames=80748 state=RUNNING
+[VISION TTS done #70] success=true queue_ms=2018.93 synth_ms=14861.2 playback_ms=3360.51 asr_text_to_end_ms=21738.7
+[Replay] scheduled_ms=1065000 source=fixed_audio
+[ASR] Segment #72: 前面有什么 | latency=674.974 ms | RTF=0.498503
+
+[ASR->VISION #72] 前面有什么
+[Dispatch] id=72 callback_ms=0.725695
+[VLM done #72] success=true queue_ms=0.04638 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1536.28
+[VLM Answer #72]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #71] success=true queue_ms=5597.9 synth_ms=9018.87 audio_sec=1.95617 playback_ms=1985.03 xruns=0 asr_text_to_end_ms=17719.8
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1080000 source=fixed_audio
+[ASR] Segment #73: 一加一等于几 | latency=745.396 ms | RTF=0.472368
+
+[ASR->LLM #73] 一加一等于几
+[Dispatch] id=73 callback_ms=0.147627
+
+[LLM #73] 一加一等于二。
+[LLM done #73] success=true queue_ms=0.097721 first_text_ms=199.112 latency_ms=1024
+[ALSA write] submitted_frames=80695 state=RUNNING
+[VISION TTS done #72] success=true queue_ms=1227.17 synth_ms=14562.3 playback_ms=3360.33 asr_text_to_end_ms=20686.4
+[Replay] scheduled_ms=1095000 source=fixed_audio
+[ASR] Segment #74: 一加一等于几 | latency=667.29 ms | RTF=0.42287
+
+[ASR->LLM #74] 一加一等于几
+[Dispatch] id=74 callback_ms=2.86558
+
+[LLM #74] 一加一等于二。
+[LLM done #74] success=true queue_ms=0.028882 first_text_ms=127.105 latency_ms=864.237
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #73] success=true queue_ms=4596.52 synth_ms=8993.26 audio_sec=1.95621 playback_ms=1985.81 xruns=0 asr_text_to_end_ms=16600
+[ALSA write] submitted_frames=46611 state=RUNNING
+[TTS done #74] success=true queue_ms=797.532 synth_ms=8880.11 audio_sec=1.94213 playback_ms=1984.85 xruns=0 asr_text_to_end_ms=12527.1
+[Replay] scheduled_ms=1110000 source=fixed_audio
+[ASR] Segment #75: 前面有什么 | latency=544.669 ms | RTF=0.402266
+
+[ASR->VISION #75] 前面有什么
+[Dispatch] id=75 callback_ms=1.1221
+[VLM done #75] success=true queue_ms=0.031309 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1526.76
+[VLM Answer #75]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1125000 source=fixed_audio
+[ASR] Segment #76: 前面有什么 | latency=688.635 ms | RTF=0.508593
+
+[ASR->VISION #76] 前面有什么
+[Dispatch] id=76 callback_ms=0.130568
+[VLM done #76] success=true queue_ms=0.042474 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1520.38
+[VLM Answer #76]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #75] success=true queue_ms=0.029716 synth_ms=13782.2 playback_ms=3360.36 asr_text_to_end_ms=18669.6
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1140000 source=fixed_audio
+[ASR] Segment #77: 一加一等于几 | latency=742.443 ms | RTF=0.470496
+
+[ASR->LLM #77] 一加一等于几
+[Dispatch] id=77 callback_ms=0.097784
+
+[LLM #77] 一加一等于二。
+[LLM done #77] success=true queue_ms=0.087375 first_text_ms=152.791 latency_ms=1060.65
+[ALSA write] submitted_frames=80743 state=RUNNING
+[VISION TTS done #76] success=true queue_ms=2000.47 synth_ms=14594.8 playback_ms=3362.86 asr_text_to_end_ms=21479.1
+[Replay] scheduled_ms=1155000 source=fixed_audio
+[ASR] Segment #78: 前面有什么 | latency=680.237 ms | RTF=0.502391
+
+[ASR->VISION #78] 前面有什么
+[Dispatch] id=78 callback_ms=0.771522
+[VLM done #78] success=true queue_ms=0.046734 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1569.76
+[VLM Answer #78]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #77] success=true queue_ms=5367.57 synth_ms=9230.74 audio_sec=1.95617 playback_ms=1985.64 xruns=0 asr_text_to_end_ms=17645
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1170000 source=fixed_audio
+[ASR] Segment #79: 一加一等于几 | latency=747.827 ms | RTF=0.473908
+
+[ASR->LLM #79] 一加一等于几
+[Dispatch] id=79 callback_ms=0.115114
+
+[LLM #79] 一加一等于二。
+[LLM done #79] success=true queue_ms=0.080092 first_text_ms=162.028 latency_ms=976.329
+[ALSA write] submitted_frames=80752 state=RUNNING
+[VISION TTS done #78] success=true queue_ms=1135.8 synth_ms=14606.3 playback_ms=3360.6 asr_text_to_end_ms=20672.8
+[Replay] scheduled_ms=1185000 source=fixed_audio
+[ASR] Segment #80: 一加一等于几 | latency=687.362 ms | RTF=0.435591
+
+[ASR->LLM #80] 一加一等于几
+[Dispatch] id=80 callback_ms=0.073484
+
+[LLM #80] 一加一等于二。
+[LLM done #80] success=true queue_ms=0.032501 first_text_ms=127.099 latency_ms=876.424
+[ALSA write] submitted_frames=46716 state=RUNNING
+[TTS done #79] success=true queue_ms=4632.61 synth_ms=9116.01 audio_sec=1.9465 playback_ms=1985.03 xruns=0 asr_text_to_end_ms=16710.5
+[ALSA write] submitted_frames=46952 state=RUNNING
+[TTS done #80] success=true queue_ms=889.377 synth_ms=8744.48 audio_sec=1.95633 playback_ms=1984.99 xruns=0 asr_text_to_end_ms=12495.6
+[Replay] scheduled_ms=1200000 source=fixed_audio
+[ASR] Segment #81: 前面有什么 | latency=542.498 ms | RTF=0.400663
+
+[ASR->VISION #81] 前面有什么
+[Dispatch] id=81 callback_ms=0.039428
+[VLM done #81] success=true queue_ms=0.090484 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1487.31
+[VLM Answer #81]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1215000 source=fixed_audio
+[ASR] Segment #82: 前面有什么 | latency=686.792 ms | RTF=0.507232
+
+[ASR->VISION #82] 前面有什么
+[Dispatch] id=82 callback_ms=0.064215
+[VLM done #82] success=true queue_ms=0.040403 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1531.72
+[VLM Answer #82]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80742 state=RUNNING
+[VISION TTS done #81] success=true queue_ms=0.069614 synth_ms=13809.8 playback_ms=3360.91 asr_text_to_end_ms=18658.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1230000 source=fixed_audio
+[ASR] Segment #83: 一加一等于几 | latency=744.473 ms | RTF=0.471783
+
+[ASR->LLM #83] 一加一等于几
+[Dispatch] id=83 callback_ms=0.065171
+
+[LLM #83] 一加一等于二。
+[LLM done #83] success=true queue_ms=0.04603 first_text_ms=180.387 latency_ms=913.986
+[ALSA write] submitted_frames=80753 state=RUNNING
+[VISION TTS done #82] success=true queue_ms=1982.64 synth_ms=14430.7 playback_ms=3360.19 asr_text_to_end_ms=21305.5
+[Replay] scheduled_ms=1245000 source=fixed_audio
+[ASR] Segment #84: 前面有什么 | latency=683.931 ms | RTF=0.505119
+
+[ASR->VISION #84] 前面有什么
+[Dispatch] id=84 callback_ms=0.068897
+[VLM done #84] success=true queue_ms=0.049804 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1492.74
+[VLM Answer #84]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46712 state=RUNNING
+[TTS done #83] success=true queue_ms=5339.06 synth_ms=8913.49 audio_sec=1.94633 playback_ms=1985.5 xruns=0 asr_text_to_end_ms=17152.4
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1260000 source=fixed_audio
+[ASR] Segment #85: 一加一等于几 | latency=745.14 ms | RTF=0.472205
+
+[ASR->LLM #85] 一加一等于几
+[Dispatch] id=85 callback_ms=0.114484
+
+[LLM #85] 一加一等于二。
+[LLM done #85] success=true queue_ms=0.070625 first_text_ms=172.141 latency_ms=964.482
+[ALSA write] submitted_frames=80693 state=RUNNING
+[VISION TTS done #84] success=true queue_ms=730.472 synth_ms=14477.4 playback_ms=3360.42 asr_text_to_end_ms=20061.4
+[Replay] scheduled_ms=1275000 source=fixed_audio
+[ASR] Segment #86: 一加一等于几 | latency=594.588 ms | RTF=0.376798
+
+[ASR->LLM #86] 一加一等于几
+[Dispatch] id=86 callback_ms=0.047198
+
+[LLM #86] 一加一等于二[ALSA write] submitted_frames=46952 state=RUNNING
+。
+[LLM done #86] success=true queue_ms=0.029862 first_text_ms=130.386 latency_ms=859.385
+[TTS done #85] success=true queue_ms=4020.53 synth_ms=9004.9 audio_sec=1.95633 playback_ms=1986.59 xruns=0 asr_text_to_end_ms=15976.9
+[ALSA write] submitted_frames=46713 state=RUNNING
+[TTS done #86] success=true queue_ms=285.741 synth_ms=8762.19 audio_sec=1.94637 playback_ms=1984.91 xruns=0 asr_text_to_end_ms=11892.5
+[Replay] scheduled_ms=1290000 source=fixed_audio
+[ASR] Segment #87: 前面有什么 | latency=537.225 ms | RTF=0.396769
+
+[ASR->VISION #87] 前面有什么
+[Dispatch] id=87 callback_ms=0.045119
+[VLM done #87] success=true queue_ms=0.094082 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1547.48
+[VLM Answer #87]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1305000 source=fixed_audio
+[ASR] Segment #88: 前面有什么 | latency=689.007 ms | RTF=0.508867
+
+[ASR->VISION #88] 前面有什么
+[Dispatch] id=88 callback_ms=0.121819
+[VLM done #88] success=true queue_ms=0.086207 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1543.61
+[VLM Answer #88]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80747 state=RUNNING
+[VISION TTS done #87] success=true queue_ms=0.026369 synth_ms=13997.8 playback_ms=3360.53 asr_text_to_end_ms=18906.2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1320000 source=fixed_audio
+[ASR] Segment #89: 一加一等于几 | latency=744.251 ms | RTF=0.471642
+
+[ASR->LLM #89] 一加一等于几
+[Dispatch] id=89 callback_ms=0.075333
+
+[LLM #89] 一加一等于二。
+[LLM done #89] success=true queue_ms=0.042982 first_text_ms=180.246 latency_ms=1071.23
+[ALSA write] submitted_frames=80746 state=RUNNING
+[VISION TTS done #88] success=true queue_ms=2212.29 synth_ms=14616.8 playback_ms=3360.48 asr_text_to_end_ms=21733.6
+[Replay] scheduled_ms=1335000 source=fixed_audio
+[ASR] Segment #90: 前面有什么 | latency=673.844 ms | RTF=0.497669
+
+[ASR->VISION #90] 前面有什么
+[Dispatch] id=90 callback_ms=0.076754
+[VLM done #90] success=true queue_ms=0.056593 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1583.56
+[VLM Answer #90]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46739 state=RUNNING
+[TTS done #89] success=true queue_ms=5607.85 synth_ms=9351.94 audio_sec=1.94746 playback_ms=1985.22 xruns=0 asr_text_to_end_ms=18016.5
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1350000 source=fixed_audio
+[ASR] Segment #91: 一加一等于几 | latency=744.016 ms | RTF=0.471493
+
+[ASR->LLM #91] 一加一等于几
+[Dispatch] id=91 callback_ms=0.064313
+
+[LLM #91] 一加一等于二。
+[LLM done #91] success=true queue_ms=0.042598 first_text_ms=209.545 latency_ms=1060.76
+[ALSA write] submitted_frames=80748 state=RUNNING
+[VISION TTS done #90] success=true queue_ms=1492.59 synth_ms=14487.9 playback_ms=3361.04 asr_text_to_end_ms=20925.5
+[Replay] scheduled_ms=1365000 source=fixed_audio
+[ASR] Segment #92: 一加一等于几 | latency=681.534 ms | RTF=0.431897
+
+[ASR->LLM #92] 一加一等于几
+[Dispatch] id=92 callback_ms=0.09382
+
+[LLM #92] 一加一等于二。
+[LLM done #92] success=true queue_ms=0.055653 first_text_ms=122.557 latency_ms=859.736
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #91] success=true queue_ms=4793.54 synth_ms=8837.63 audio_sec=1.95617 playback_ms=1985.95 xruns=0 asr_text_to_end_ms=16678.3
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #92] success=true queue_ms=894.071 synth_ms=8826.93 audio_sec=1.95617 playback_ms=1985.07 xruns=0 asr_text_to_end_ms=12566.3
+[Replay] scheduled_ms=1380000 source=fixed_audio
+[ASR] Segment #93: 前面有什么 | latency=539.158 ms | RTF=0.398196
+
+[ASR->VISION #93] 前面有什么
+[Dispatch] id=93 callback_ms=0.041189
+[VLM done #93] success=true queue_ms=0.080591 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1491.3
+[VLM Answer #93]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1395000 source=fixed_audio
+[ASR] Segment #94: 前面有什么 | latency=683.869 ms | RTF=0.505073
+
+[ASR->VISION #94] 前面有什么
+[Dispatch] id=94 callback_ms=0.061156
+[VLM done #94] success=true queue_ms=0.042657 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1511.93
+[VLM Answer #94]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80743 state=RUNNING
+[VISION TTS done #93] success=true queue_ms=0.050509 synth_ms=13778.8 playback_ms=3360.85 asr_text_to_end_ms=18631.4
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1410000 source=fixed_audio
+[ASR] Segment #95: 一加一等于几 | latency=742.019 ms | RTF=0.470227
+
+[ASR->LLM #95] 一加一等于几
+[Dispatch] id=95 callback_ms=0.066341
+
+[LLM #95] 一加一等于二。
+[LLM done #95] success=true queue_ms=0.047182 first_text_ms=191.383 latency_ms=1010.77
+[ALSA write] submitted_frames=80794 state=RUNNING
+[VISION TTS done #94] success=true queue_ms=1974.35 synth_ms=14432.8 playback_ms=3360.08 asr_text_to_end_ms=21279.5
+[Replay] scheduled_ms=1425000 source=fixed_audio
+[ASR] Segment #96: 前面有什么 | latency=673.005 ms | RTF=0.497049
+
+[ASR->VISION #96] 前面有什么
+[Dispatch] id=96 callback_ms=0.072472
+[VLM done #96] success=true queue_ms=0.05398 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1562.9
+[VLM Answer #96]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46712 state=RUNNING
+[TTS done #95] success=true queue_ms=5204.32 synth_ms=9297.35 audio_sec=1.94633 playback_ms=1985.63 xruns=0 asr_text_to_end_ms=17498.4
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1440000 source=fixed_audio
+[ASR] Segment #97: 一加一等于几 | latency=746.453 ms | RTF=0.473037
+
+[ASR->LLM #97] 一加一等于几
+[Dispatch] id=97 callback_ms=0.113479
+
+[LLM #97] 一加一等于二。
+[LLM done #97] success=true queue_ms=0.047514 first_text_ms=164.385 latency_ms=866.788
+[ALSA write] submitted_frames=80754 state=RUNNING
+[VISION TTS done #96] success=true queue_ms=1006.99 synth_ms=14449.3 playback_ms=3360.42 asr_text_to_end_ms=20380
+[Replay] scheduled_ms=1455000 source=fixed_audio
+[ASR] Segment #98: 一加一等于几 | latency=583.811 ms | RTF=0.369969
+
+[ASR->LLM #98] 一加一等于几
+[Dispatch] id=98 callback_ms=0.044431
+
+[LLM #98] 一加一等于二[ALSA write] submitted_frames=46948 state=RUNNING
+。
+[LLM done #98] success=true queue_ms=0.08005 first_text_ms=140.349 latency_ms=868.284
+[TTS done #97] success=true queue_ms=4433.51 synth_ms=8724.8 audio_sec=1.95617 playback_ms=1986.39 xruns=0 asr_text_to_end_ms=16011.8
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #98] success=true queue_ms=322.84 synth_ms=8758.39 audio_sec=1.95621 playback_ms=1985.2 xruns=0 asr_text_to_end_ms=11935.2
+[Replay] scheduled_ms=1470000 source=fixed_audio
+[ASR] Segment #99: 前面有什么 | latency=541.014 ms | RTF=0.399567
+
+[ASR->VISION #99] 前面有什么
+[Dispatch] id=99 callback_ms=0.042053
+[VLM done #99] success=true queue_ms=0.085206 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1511.88
+[VLM Answer #99]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1485000 source=fixed_audio
+[ASR] Segment #100: 前面有什么 | latency=682.88 ms | RTF=0.504342
+
+[ASR->VISION #100] 前面有什么
+[Dispatch] id=100 callback_ms=0.087299
+[VLM done #100] success=true queue_ms=0.040713 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1505.2
+[VLM Answer #100]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #99] success=true queue_ms=0.070405 synth_ms=13772.6 playback_ms=3360.4 asr_text_to_end_ms=18645.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1500000 source=fixed_audio
+[ASR] Segment #101: 一加一等于几 | latency=741.43 ms | RTF=0.469854
+
+[ASR->LLM #101] 一加一等于几
+[Dispatch] id=101 callback_ms=0.076616
+
+[LLM #101] 一加一等于二。
+[LLM done #101] success=true queue_ms=0.05331 first_text_ms=177.286 latency_ms=914.31
+[ALSA write] submitted_frames=80749 state=RUNNING
+[VISION TTS done #100] success=true queue_ms=2005.75 synth_ms=14434.5 playback_ms=3360.34 asr_text_to_end_ms=21306.2
+[Replay] scheduled_ms=1515000 source=fixed_audio
+[ASR] Segment #102: 前面有什么 | latency=677.87 ms | RTF=0.500643
+
+[ASR->VISION #102] 前面有什么
+[Dispatch] id=102 callback_ms=0.108281
+[VLM done #102] success=true queue_ms=0.088931 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1511.92
+[VLM Answer #102]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #101] success=true queue_ms=5334.37 synth_ms=8889.52 audio_sec=1.95617 playback_ms=1985.33 xruns=0 asr_text_to_end_ms=17124.1
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1530000 source=fixed_audio
+[ASR] Segment #103: 一加一等于几 | latency=746.741 ms | RTF=0.47322
+
+[ASR->LLM #103] 一加一等于几
+[Dispatch] id=103 callback_ms=0.05651
+
+[LLM #103] 一加一等于二。
+[LLM done #103] success=true queue_ms=0.034671 first_text_ms=185.801 latency_ms=1043.65
+[ALSA write] submitted_frames=80754 state=RUNNING
+[VISION TTS done #102] success=true queue_ms=664.997 synth_ms=14537.5 playback_ms=3359.85 asr_text_to_end_ms=20074.7
+[Replay] scheduled_ms=1545000 source=fixed_audio
+[ASR] Segment #104: 一加一等于几 | latency=585.762 ms | RTF=0.371205
+
+[ASR->LLM #104] 一加一等于几
+[Dispatch] id=104 callback_ms=0.0397
+
+[LLM #104] 一加一等于[ALSA write] submitted_frames=46949 state=RUNNING
+二。
+[LLM done #104] success=true queue_ms=0.076138 first_text_ms=134.194 latency_ms=870.755
+[TTS done #103] success=true queue_ms=3968.69 synth_ms=8901.65 audio_sec=1.95621 playback_ms=1985.48 xruns=0 asr_text_to_end_ms=15899.7
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #104] success=true queue_ms=179.2 synth_ms=8747.87 audio_sec=1.95617 playback_ms=1985.18 xruns=0 asr_text_to_end_ms=11783.4
+[Replay] scheduled_ms=1560000 source=fixed_audio
+[ASR] Segment #105: 前面有什么 | latency=550.286 ms | RTF=0.406415
+
+[ASR->VISION #105] 前面有什么
+[Dispatch] id=105 callback_ms=0.080294
+[VLM done #105] success=true queue_ms=0.033435 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1525.81
+[VLM Answer #105]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1575000 source=fixed_audio
+[ASR] Segment #106: 前面有什么 | latency=689.716 ms | RTF=0.509392
+
+[ASR->VISION #106] 前面有什么
+[Dispatch] id=106 callback_ms=0.143974
+[VLM done #106] success=true queue_ms=0.090798 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1543.92
+[VLM Answer #106]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80697 state=RUNNING
+[VISION TTS done #105] success=true queue_ms=0.02482 synth_ms=14035.4 playback_ms=3360.31 asr_text_to_end_ms=18921.8
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1590000 source=fixed_audio
+[ASR] Segment #107: 一加一等于几 | latency=742.563 ms | RTF=0.470572
+
+[ASR->LLM #107] 一加一等于几
+[Dispatch] id=107 callback_ms=0.122989
+
+[LLM #107] 一加一等于二。
+[LLM done #107] success=true queue_ms=0.090655 first_text_ms=162.432 latency_ms=917.188
+[ALSA write] submitted_frames=80693 state=RUNNING
+[VISION TTS done #106] success=true queue_ms=2247.17 synth_ms=14467.7 playback_ms=3360.37 asr_text_to_end_ms=21619.5
+[Replay] scheduled_ms=1605000 source=fixed_audio
+[ASR] Segment #108: 前面有什么 | latency=683.021 ms | RTF=0.504447
+
+[ASR->VISION #108] 前面有什么
+[Dispatch] id=108 callback_ms=0.101482
+[VLM done #108] success=true queue_ms=0.054649 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1580.15
+[VLM Answer #108]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46996 state=RUNNING
+[TTS done #107] success=true queue_ms=5650.57 synth_ms=9398.54 audio_sec=1.95817 playback_ms=1985.34 xruns=0 asr_text_to_end_ms=17952.1
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1620000 source=fixed_audio
+[ASR] Segment #109: 一加一等于几 | latency=746.765 ms | RTF=0.473235
+
+[ASR->LLM #109] 一加一等于几
+[Dispatch] id=109 callback_ms=0.071036
+
+[LLM #109] 一加一等于二。
+[LLM done #109] success=true queue_ms=0.04365 first_text_ms=157.744 latency_ms=932.34
+[ALSA write] submitted_frames=80754 state=RUNNING
+[VISION TTS done #108] success=true queue_ms=1433.62 synth_ms=14493 playback_ms=3360.69 asr_text_to_end_ms=20867.8
+[Replay] scheduled_ms=1635000 source=fixed_audio
+[ASR] Segment #110: 一加一等于几 | latency=704.907 ms | RTF=0.446709
+
+[ASR->LLM #110] 一加一等于几
+[Dispatch] id=110 callback_ms=0.0416
+
+[LLM #110] 一加一等于二。
+[LLM done #110] success=true queue_ms=0.084751 first_text_ms=142.138 latency_ms=861.829
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #109] success=true queue_ms=4866.09 synth_ms=8988.94 audio_sec=1.95617 playback_ms=1985.2 xruns=0 asr_text_to_end_ms=16772.9
+[ALSA write] submitted_frames=46993 state=RUNNING
+[TTS done #110] success=true queue_ms=952.111 synth_ms=8741.44 audio_sec=1.95804 playback_ms=1985.35 xruns=0 asr_text_to_end_ms=12541.1
+[Replay] scheduled_ms=1650000 source=fixed_audio
+[ASR] Segment #111: 前面有什么 | latency=547.621 ms | RTF=0.404447
+
+[ASR->VISION #111] 前面有什么
+[Dispatch] id=111 callback_ms=0.044771
+[VLM done #111] success=true queue_ms=0.032112 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1529.97
+[VLM Answer #111]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1665000 source=fixed_audio
+[ASR] Segment #112: 前面有什么 | latency=691.517 ms | RTF=0.510722
+
+[ASR->VISION #112] 前面有什么
+[Dispatch] id=112 callback_ms=0.098878
+[VLM done #112] success=true queue_ms=0.044131 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1499.93
+[VLM Answer #112]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80746 state=RUNNING
+[VISION TTS done #111] success=true queue_ms=0.032301 synth_ms=13813.1 playback_ms=3360.36 asr_text_to_end_ms=18703.7
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1680000 source=fixed_audio
+[ASR] Segment #113: 一加一等于几 | latency=742.901 ms | RTF=0.470787
+
+[ASR->LLM #113] 一加一等于几
+[Dispatch] id=113 callback_ms=0.277218
+
+[LLM #113] 一加一等于二。
+[LLM done #113] success=true queue_ms=0.101053 first_text_ms=179.957 latency_ms=897.299
+[ALSA write] submitted_frames=80704 state=RUNNING
+[VISION TTS done #112] success=true queue_ms=2052.46 synth_ms=14437.7 playback_ms=3360.3 asr_text_to_end_ms=21350.6
+[Replay] scheduled_ms=1695000 source=fixed_audio
+[ASR] Segment #114: 前面有什么 | latency=678.907 ms | RTF=0.501409
+
+[ASR->VISION #114] 前面有什么
+[Dispatch] id=114 callback_ms=0.067609
+[VLM done #114] success=true queue_ms=0.04816 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1560.37
+[VLM Answer #114]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46949 state=RUNNING
+[TTS done #113] success=true queue_ms=5403.15 synth_ms=9225.72 audio_sec=1.95621 playback_ms=1984.79 xruns=0 asr_text_to_end_ms=17511.9
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1710000 source=fixed_audio
+[ASR] Segment #115: 一加一等于几 | latency=744.677 ms | RTF=0.471912
+
+[ASR->LLM #115] 一加一等于几
+[Dispatch] id=115 callback_ms=0.091047
+
+[LLM #115] 一加一等于二。
+[LLM done #115] success=true queue_ms=0.044861 first_text_ms=189.002 latency_ms=924.478
+[ALSA write] submitted_frames=81198 state=RUNNING
+[VISION TTS done #114] success=true queue_ms=1011.17 synth_ms=14437.7 playback_ms=3485.29 asr_text_to_end_ms=20494.9
+[Replay] scheduled_ms=1725000 source=fixed_audio
+[ASR] Segment #116: 一加一等于几 | latency=575.205 ms | RTF=0.364515
+
+[ASR->LLM #116] 一加一等于几
+[Dispatch] id=116 callback_ms=0.068837
+
+[LLM #116] 一加一等于二。
+[LLM done #116] success=true queue_ms=0.10495 first_text_ms=139.823 latency_ms=876.209
+[ALSA write] submitted_frames=46716 state=RUNNING
+[TTS done #115] success=true queue_ms=4501.19 synth_ms=8806.83 audio_sec=1.9465 playback_ms=1984.83 xruns=0 asr_text_to_end_ms=16217.8
+[ALSA write] submitted_frames=46948 state=RUNNING
+[TTS done #116] success=true queue_ms=517.228 synth_ms=8760.51 audio_sec=1.95617 playback_ms=1985.38 xruns=0 asr_text_to_end_ms=12139.8
+[Replay] scheduled_ms=1740000 source=fixed_audio
+[ASR] Segment #117: 前面有什么 | latency=536.194 ms | RTF=0.396008
+
+[ASR->VISION #117] 前面有什么
+[Dispatch] id=117 callback_ms=0.050411
+[VLM done #117] success=true queue_ms=0.036513 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1531.15
+[VLM Answer #117]  A computer monitor with a blue screen and some text on it.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1755000 source=fixed_audio
+[ASR] Segment #118: 前面有什么 | latency=689.971 ms | RTF=0.509579
+
+[ASR->VISION #118] 前面有什么
+[Dispatch] id=118 callback_ms=0.062508
+[VLM done #118] success=true queue_ms=0.04499 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1524.48
+[VLM Answer #118]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=80747 state=RUNNING
+[VISION TTS done #117] success=true queue_ms=0.032502 synth_ms=13799.9 playback_ms=3361.55 asr_text_to_end_ms=18693
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1770000 source=fixed_audio
+[ASR] Segment #119: 一加一等于几 | latency=739.167 ms | RTF=0.46842
+
+[ASR->LLM #119] 一加一等于几
+[Dispatch] id=119 callback_ms=0.068219
+
+[LLM #119] 一加一等于二。
+[LLM done #119] success=true queue_ms=0.04421 first_text_ms=155.449 latency_ms=942.052
+[ALSA write] submitted_frames=80752 state=RUNNING
+[VISION TTS done #118] success=true queue_ms=2018.84 synth_ms=14441.7 playback_ms=3360.32 asr_text_to_end_ms=21345.7
+[Replay] scheduled_ms=1785000 source=fixed_audio
+[ASR] Segment #120: 前面有什么 | latency=685.972 ms | RTF=0.506626
+
+[ASR->VISION #120] 前面有什么
+[Dispatch] id=120 callback_ms=0.739302
+[VLM done #120] success=true queue_ms=0.037622 disposition=completed frame_id=29 frame_age_ms=-1 latency_ms=1541.57
+[VLM Answer #120]  A computer monitor with a blue screen and some text on it.
+[ALSA write] submitted_frames=46739 state=RUNNING
+[TTS done #119] success=true queue_ms=5358.21 synth_ms=8900.47 audio_sec=1.94746 playback_ms=1986.18 xruns=0 asr_text_to_end_ms=17187.3
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[Replay] scheduled_ms=1800000 source=fixed_audio
+[ASR] Segment #121: 一加一等于几 | latency=754.481 ms | RTF=0.478125
+
+[ASR->LLM #121] 一加一等于几
+[Dispatch] id=121 callback_ms=0.067539
+[Shutdown] replay input closed; recognizer destroyed
+
+[LLM #121] 一加一等于二。
+[LLM done #121] success=true queue_ms=0.043938 first_text_ms=276.051 latency_ms=1158.77
+[Shutdown] LLM joined; Qwen runtime destroyed
+[ALSA write] submitted_frames=80755 state=RUNNING
+[VISION TTS done #120] success=true queue_ms=689.25 synth_ms=15315.6 playback_ms=3361.46 asr_text_to_end_ms=20908.2
+[ALSA write] submitted_frames=46952 state=RUNNING
+[TTS done #121] success=true queue_ms=4682.67 synth_ms=8781.81 audio_sec=1.95633 playback_ms=1984.86 xruns=0 asr_text_to_end_ms=16608.5
+[Shutdown] TTS joined; playback_xruns=0
+[FramePool] allocated=2 in_use=0 acquired=54595 reused=54593 exhausted=0
+[CameraCounters] published=54594 fps=29.997 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[Shutdown] playback/TTS closed; Camera stopped; VLM destroyed
+[Shutdown] complete signal=0
+
+=== ASR -> LLM -> TTS summary ===
+VAD segments: 0
+ASR recognized: 121
+Audio queue dropped: 0
+LLM accepted/completed/success/failed/rejected: 61/61/61/0/0
+TTS accepted/completed/success/failed/rejected/empty: 121/121/121/0/0/0
+Skipped VISION: 0
+VISION completed/success/failed: 60/60/0
+[AudioQueueStats] pushed=121 popped=121 dropped=0 rejected_closed=0 peak=1 pending=0
+[QueueStats] stage=inference generation=1 accepted=121 completed=121 started=121 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=1 pending=0 active=0 callback_errors=0 queue_sum_ms=6.14481 queue_max_ms=0.10495 service_sum_ms=150294
+[QueueStats] stage=tts generation=1 accepted=121 completed=121 started=121 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=1 pending=0 active=0 callback_errors=0 queue_sum_ms=265455 queue_max_ms=5738.32 service_sum_ms=1.72508e+06
+[PipelineStats] dispatched=121 accepted=121 rejected=0 inflight=0 peak=2 limit=2 vision_accepted=60 vision_rejected=0 llm_cancelled=0 llm_expired=0 vision_cancelled=0 vision_expired=0 cancelled_before_submit=0 downstream_cancelled=0 tts_cancelled=0 tts_expired=0
+PASS
+[FramePool] allocated=2 in_use=0 acquired=54595 reused=54593 exhausted=0
+[CameraCounters] published=54594 fps=29.997 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
