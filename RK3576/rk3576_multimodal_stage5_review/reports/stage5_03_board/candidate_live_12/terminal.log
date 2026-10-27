@@ -1,0 +1,35 @@
+Camera format: 3840x2160, planes=1
+[CameraFormat] width=3840 height=2160 fourcc=842094158 planes=1 colorspace=0 ycbcr_enc=0 quantization=1
+[CameraPlane] plane=0 bytesperline=3840 sizeimage=12441600
+[CameraMap] buffer=0 plane=0 length=12441600
+[CameraMap] buffer=1 plane=0 length=12441600
+[CameraMap] buffer=2 plane=0 length=12441600
+[CameraMap] buffer=3 plane=0 length=12441600
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[MemoryProbe] sample=0 success=1 frame=27 vlm_ms=1728.72 answer= A computer monitor with a blue screen and some text on it. error=
+[MemoryProbe] sample=1 success=1 frame=79 vlm_ms=1736.68 answer= A computer monitor, a printer, and a laptop are visible in the room. error=
+[MemoryProbe] sample=2 success=1 frame=132 vlm_ms=1741.25 answer= A computer monitor, a keyboard, and a laptop are visible in the image. error=
+[MemoryProbe] sample=3 success=1 frame=185 vlm_ms=1779.1 answer= A computer monitor, a keyboard, and a mouse are visible in the image. error=
+[MemoryProbe] sample=4 success=1 frame=238 vlm_ms=1770.75 answer= A computer monitor, a printer, and a laptop are visible in the room. error=
+[MemoryProbe] sample=5 success=1 frame=291 vlm_ms=1787.41 answer= A computer monitor, a keyboard, and a mouse are visible in the image. error=
+[MemoryProbe] sample=6 success=1 frame=345 vlm_ms=1765.66 answer= A computer monitor, a keyboard, and a laptop are visible in the image. error=
+[MemoryProbe] sample=7 success=1 frame=398 vlm_ms=1781.92 answer= A computer monitor with a blue screen, and a black laptop on the desk. error=
+[MemoryProbe] sample=8 success=1 frame=451 vlm_ms=1767.14 answer= A computer monitor, a printer, and a laptop are visible in the image. error=
+[MemoryProbe] sample=9 success=1 frame=504 vlm_ms=1758.53 answer= A computer monitor with a blue screen, and a black laptop on the desk. error=
+[MemoryProbe] sample=10 success=1 frame=557 vlm_ms=1796.04 answer= A computer monitor with a blue screen, and a black laptop on the desk. error=
+[MemoryProbe] sample=11 success=1 frame=611 vlm_ms=1829.4 answer= A computer monitor with a blue screen, and a black laptop on the desk. error=
+[FramePool] allocated=3 in_use=0 acquired=667 reused=664 exhausted=0
+[CameraCounters] published=666 fps=29.7634 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[MemoryProbe] stopped fps=29.9034 frames=666 timeouts=0
+[FramePool] allocated=3 in_use=0 acquired=667 reused=664 exhausted=0
+[CameraCounters] published=666 fps=29.7634 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
