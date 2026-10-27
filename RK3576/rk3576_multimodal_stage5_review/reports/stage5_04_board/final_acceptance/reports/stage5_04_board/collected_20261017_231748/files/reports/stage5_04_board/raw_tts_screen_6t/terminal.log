@@ -1,0 +1,13 @@
+[SDK] sherpa=1.13.8 git=11afbd00 ort=1.28.2
+[TTSInit] ms=6044.68 threads=6 sid=17 sample_rate=24000
+[TTSBench] iteration=0 language=zh phase=first_use synth_ms=5899.53 wall_ms=5899.56 audio_seconds=1.94233 nonfinite=0
+[TTSBench] iteration=0 language=en phase=first_use synth_ms=10603.2 wall_ms=10603.2 audio_seconds=4.11412 nonfinite=0
+[TTSBench] iteration=1 language=zh phase=warmup synth_ms=6111.11 wall_ms=6111.14 audio_seconds=1.9465 nonfinite=0
+[TTSBench] iteration=1 language=en phase=warmup synth_ms=10849.7 wall_ms=10849.7 audio_seconds=4.11392 nonfinite=0
+[TTSBench] iteration=2 language=zh phase=measured synth_ms=6889.96 wall_ms=6889.98 audio_seconds=1.94633 nonfinite=0
+[TTSBench] iteration=2 language=en phase=measured synth_ms=11274.5 wall_ms=11274.6 audio_seconds=4.1115 nonfinite=0
+[TTSBench] iteration=3 language=zh phase=measured synth_ms=6917.03 wall_ms=6917.05 audio_seconds=1.95513 nonfinite=0
+[TTSBench] iteration=3 language=en phase=measured synth_ms=11402 wall_ms=11402 audio_seconds=4.11479 nonfinite=0
+[TTSBench] iteration=4 language=zh phase=measured synth_ms=6945.2 wall_ms=6945.23 audio_seconds=1.95804 nonfinite=0
+[TTSBench] iteration=4 language=en phase=measured synth_ms=11296.1 wall_ms=11296.2 audio_seconds=4.11508 nonfinite=0
+[TTSBench] complete
