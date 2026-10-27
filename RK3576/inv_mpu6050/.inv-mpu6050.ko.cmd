@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.ko /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.o /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.mod.o;  true

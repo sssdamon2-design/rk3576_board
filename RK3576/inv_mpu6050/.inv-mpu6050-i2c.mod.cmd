@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.mod := printf '%s\n'   inv_mpu_i2c.o inv_mpu_acpi.o | awk '!x[$$0]++ { print("/home/cat/projects/RK3576/inv_mpu6050/"$$0) }' > /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.mod

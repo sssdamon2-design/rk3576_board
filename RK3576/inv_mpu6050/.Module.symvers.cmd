@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/Module.symvers :=  sed 's/ko$$/o/'  /home/cat/projects/RK3576/inv_mpu6050/modules.order | scripts/mod/modpost      -o /home/cat/projects/RK3576/inv_mpu6050/Module.symvers -e -i Module.symvers -T - 

@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.o := ld -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments   -r -o /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.o @/home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.mod 

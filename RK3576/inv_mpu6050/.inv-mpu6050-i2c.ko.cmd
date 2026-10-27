@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.ko /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.o /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.mod.o;  true

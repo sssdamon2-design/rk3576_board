@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.mod := printf '%s\n'   inv_mpu_core.o inv_mpu_ring.o inv_mpu_trigger.o inv_mpu_aux.o inv_mpu_magn.o | awk '!x[$$0]++ { print("/home/cat/projects/RK3576/inv_mpu6050/"$$0) }' > /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.mod

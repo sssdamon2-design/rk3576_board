@@ -1,0 +1,1 @@
+cmd_/home/cat/projects/RK3576/inv_mpu6050/modules.order := {   echo /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050.ko;   echo /home/cat/projects/RK3576/inv_mpu6050/inv-mpu6050-i2c.ko; :; } > /home/cat/projects/RK3576/inv_mpu6050/modules.order
