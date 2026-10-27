@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "ps",
+      "-eo",
+      "pid,uid,comm,args"
+    ],
+    "returncode": 0,
+    "stdout": "   1586  1000 gdm-x-session   /usr/libexec/gdm-x-session --run-script /usr/bin/gnome-session\n   1588     0 Xorg            /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3\n   1619  1000 gnome-session-b /usr/libexec/gnome-session-binary\n   1667  1000 ssh-agent       /usr/bin/ssh-agent /usr/bin/gnome-session\n   2067  1000 at-spi2-registr /usr/libexec/at-spi2-registryd --use-gnome-session\n   2304  1000 x11vnc          /usr/bin/x11vnc -auth guess -display :0 -rfbauth /home/cat/.vnc/passwd -rfbport 5900 -forever -loop -noxdamage -repeat -shared -capslock -nomodtweak\n   2351  1000 x11vnc          /usr/bin/x11vnc -auth guess -display :0 -rfbauth /home/cat/.vnc/passwd -rfbport 5900 -forever -loop -noxdamage -repeat -shared -capslock -nomodtweak",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "amixer",
+      "-c",
+      "3",
+      "scontents"
+    ],
+    "returncode": 0,
+    "stdout": "Simple mixer control 'Speaker Volume',0\n  Capabilities: pvolume pswitch pswitch-joined\n  Playback channels: Front Left - Front Right\n  Limits: Playback 0 - 18944\n  Mono:\n  Front Left: Playback 16256 [86%] [-10.50dB] [on]\n  Front Right: Playback 16256 [86%] [-10.50dB] [on]\nSimple mixer control 'Mic Volume',0\n  Capabilities: cvolume cvolume-joined cswitch cswitch-joined\n  Capture channels: Mono\n  Limits: Capture 0 - 18944\n  Mono: Capture 18944 [100%] [0.00dB] [on]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "who"
+    ],
+    "returncode": 0,
+    "stdout": "cat      :0           2025-06-26 22:58 (:0)\n",
+    "stderr": ""
+  },
+  {
+    "X11_sockets": [
+      "/tmp/.X11-unix/X0"
+    ]
+  }
+]

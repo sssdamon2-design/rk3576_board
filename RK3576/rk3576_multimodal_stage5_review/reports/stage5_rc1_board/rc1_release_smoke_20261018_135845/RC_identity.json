@@ -1,0 +1,29 @@
+{
+  "version": {
+    "version": "stage5-rc1",
+    "created_at_UTC": "2026-10-18T02:54:22.904239+00:00",
+    "git_commit": null,
+    "git_tag_created": false,
+    "git_reason": "workspace is not a Git repository",
+    "source_snapshot_id": "sha256:2b19cd571f87e083b506da586aa1f1a772cd76ed253b1fe848337ff524fe6f87",
+    "source_manifest_format": "UTF-8 json.dumps(rows,sort_keys=True,separators=(comma,colon)); rows ordered as SOURCE_MANIFEST.json",
+    "accepted_board_source": "stage5_05_source_final_v2",
+    "source_files": 104,
+    "core_modified": false,
+    "models_and_SDK_included": false,
+    "entry_switched": false
+  },
+  "binaries": {
+    "asr_llm_tts_smoke": {
+      "sha256": "69141a50e3c4ec4dd64b21f0347e91ca369009813749d771ec3d98725110b34f",
+      "bytes": 567792
+    },
+    "rk3576_multimodal_gui": {
+      "sha256": "952ac93e95c42081876d346a22369fc3e85e9425b86a2571a06b68ed5aa9df3e",
+      "bytes": 237544
+    }
+  },
+  "manifest_sha256": "6baed2d4ec768e0eb611408f4ef44d57db1c92daafa5de8bbebeb3cd3d2545ce",
+  "SHA256SUMS_sha256": "202ce179da46bc73367f2efec0704c9b4d2b6281defa3f0347449735b55e35bd",
+  "harness_source_sha256": "ab3b06835734ad82db0a08df9ef7f652054b650f3180f7a8fd343602b7e7fbf3"
+}

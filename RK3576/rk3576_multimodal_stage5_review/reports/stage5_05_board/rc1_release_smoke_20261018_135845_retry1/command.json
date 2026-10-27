@@ -1,0 +1,17 @@
+[
+  "/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/releases/stage5-rc1/build/rk3576_multimodal_gui",
+  "--capture",
+  "plughw:CARD=III,DEV=0",
+  "--playback",
+  "plughw:CARD=III,DEV=0",
+  "--report-root",
+  "/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/reports/stage5_05_board/rc1_release_smoke_20261018_135845_retry1",
+  "--seconds",
+  "180",
+  "--threads",
+  "4",
+  "--stop-after-answers",
+  "0",
+  "--cycles",
+  "1"
+]

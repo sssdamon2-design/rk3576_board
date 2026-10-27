@@ -1,0 +1,4 @@
+libGL error: glx: failed to create dri3 screen
+libGL error: failed to load driver: rockchip
+libGL error: glx: failed to create dri2 screen
+libGL error: failed to load driver: rockchip

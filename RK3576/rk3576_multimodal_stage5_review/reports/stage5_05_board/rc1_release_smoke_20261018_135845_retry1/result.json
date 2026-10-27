@@ -1,0 +1,18 @@
+{
+  "returncode": 0,
+  "duration_seconds": 360.2080158030003,
+  "signal_to_exit_seconds": 0.1193150910003169,
+  "sent_signal": "SIGTERM",
+  "termination_reason": "timeout",
+  "forced_kill": false,
+  "timeout": true,
+  "process_gone": true,
+  "devices_released": true,
+  "original_321_unchanged": true,
+  "sessions": [],
+  "all_sessions_orderly": false,
+  "platform": "xcb DISPLAY :0 actual existing desktop",
+  "input_mode": "microphone",
+  "owned_children": {},
+  "user_audible_confirmation": null
+}

@@ -1,0 +1,9 @@
+{
+  "name": "rc1_release_smoke_20261018_135845",
+  "build": "stage5-rc1",
+  "mode": "microphone",
+  "timeout": 260,
+  "threads": 4,
+  "seconds": 180,
+  "audio_replay_file": null
+}

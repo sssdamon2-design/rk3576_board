@@ -1,0 +1,57 @@
+[Init] Loading RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rkllm_sdk/models/Qwen2.5-1.5B-Instruct_RK3576_w4a16.rkllm
+I rkllm: rkllm-toolkit version: 1.2.3, max_context_limit: 4096, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+[Init] Loading SenseVoice...
+[Init] Loading Kokoro...
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: ❓
+[ALSA config] buffer_frames=12000 period_frames=3000 start_threshold=6000 buffer_ms=500
+Camera format: 3840x2160, planes=1
+[CameraFormat] width=3840 height=2160 fourcc=842094158 planes=1 colorspace=0 ycbcr_enc=0 quantization=1
+[CameraPlane] plane=0 bytesperline=3840 sizeimage=12441600
+[CameraMap] buffer=0 plane=0 length=12441600
+[CameraMap] buffer=1 plane=0 length=12441600
+[CameraMap] buffer=2 plane=0 length=12441600
+[CameraMap] buffer=3 plane=0 length=12441600
+[Init] Loading SmolVLM2 RKNN + RKLLM...
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[Init] VLM and Camera ready
+[Listen] 2 seconds. Ask ONE short voice question (text or camera).
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM stage5_missing_capture
+[ALSA] XRUN=0 Suspends=0 Recoveries=0 RecoveryFailures=0
+[Shutdown] capture/VAD and ASR joined; recognizer destroyed
+[Shutdown] LLM joined; Qwen runtime destroyed
+[Shutdown] TTS joined; playback_xruns=0
+[FramePool] allocated=2 in_use=0 acquired=95 reused=93 exhausted=0
+[CameraCounters] published=94 fps=28.4152 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[Shutdown] playback/TTS closed; Camera stopped; VLM destroyed
+[Shutdown] complete signal=0
+
+=== ASR -> LLM -> TTS summary ===
+VAD segments: 0
+ASR recognized: 0
+Audio queue dropped: 0
+LLM accepted/completed/success/failed/rejected: 0/0/0/0/0
+TTS accepted/completed/success/failed/rejected/empty: 0/0/0/0/0/0
+Skipped VISION: 0
+VISION completed/success/failed: 0/0/0
+[VAD] snd_pcm_open: No such file or directory
+[AudioQueueStats] pushed=0 popped=0 dropped=0 rejected_closed=0 peak=0 pending=0
+[QueueStats] stage=inference generation=1 accepted=0 completed=0 started=0 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=0 pending=0 active=0 callback_errors=0 queue_sum_ms=0 queue_max_ms=0 service_sum_ms=0
+[QueueStats] stage=tts generation=1 accepted=0 completed=0 started=0 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=0 pending=0 active=0 callback_errors=0 queue_sum_ms=0 queue_max_ms=0 service_sum_ms=0
+[PipelineStats] dispatched=0 accepted=0 rejected=0 inflight=0 peak=0 limit=2 vision_accepted=0 vision_rejected=0 llm_cancelled=0 llm_expired=0 vision_cancelled=0 vision_expired=0 cancelled_before_submit=0 downstream_cancelled=0 tts_cancelled=0 tts_expired=0
+FAIL
+[FramePool] allocated=2 in_use=0 acquired=95 reused=93 exhausted=0
+[CameraCounters] published=94 fps=28.4152 timeouts=0 driver_sequence_gaps=0 pool_discarded=0

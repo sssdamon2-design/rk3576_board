@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "audio_device": "plughw:CARD=III,DEV=0",
+  "disk_free_bytes": 1253892096,
+  "owner_baseline": "/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/reports/stage5_05_board/rc1_release_smoke_20261018_135845_desktop_owners.json",
+  "run_name": "rc1_release_smoke_20261018_135845",
+  "hardware_started": false
+}
