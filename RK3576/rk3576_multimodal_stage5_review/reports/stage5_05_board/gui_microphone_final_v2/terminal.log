@@ -1,0 +1,86 @@
+libGL error: glx: failed to create dri3 screen
+libGL error: failed to load driver: rockchip
+libGL error: glx: failed to create dri2 screen
+libGL error: failed to load driver: rockchip
+[GUI run] /home/cat/projects/RK3576/rk3576_multimodal_stage5_review/reports/stage5_05_board/gui_microphone_final_v2/run_20261017_165440_871_7225107cc44646f68a19282099119fd5
+[Init] Loading RKLLM...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rkllm_sdk/models/Qwen2.5-1.5B-Instruct_RK3576_w4a16.rkllm
+I rkllm: rkllm-toolkit version: 1.2.3, max_context_limit: 4096, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+[Init] Loading SenseVoice...
+[Init] Loading Kokoro...
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: ❓
+[ALSA config] buffer_frames=12000 period_frames=3000 start_threshold=6000 buffer_ms=500
+Camera format: 3840x2160, planes=1
+[CameraFormat] width=3840 height=2160 fourcc=842094158 planes=1 colorspace=0 ycbcr_enc=0 quantization=1
+[CameraPlane] plane=0 bytesperline=3840 sizeimage=12441600
+[CameraMap] buffer=0 plane=0 length=12441600
+[CameraMap] buffer=1 plane=0 length=12441600
+[CameraMap] buffer=2 plane=0 length=12441600
+[CameraMap] buffer=3 plane=0 length=12441600
+[Init] Loading SmolVLM2 RKNN + RKLLM...
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[Init] VLM and Camera ready
+[Listen] 180 seconds. Ask ONE short voice question (text or camera).
+[VAD] Speech #1 duration=1.354 s
+[ASR] Segment #1: 一加一等于几 | latency=569.327 ms | RTF=0.420478
+[Timing] Segment #1 endpoint_est_ms=620.086 vad_to_queue_ms=0.008874 queue_wait_ms=0.19894 preprocess_ms=0.369428 asr_wall_ms=569.382 total_est_ms=1190.05
+
+[ASR->LLM #1] 一加一等于几
+[Dispatch] id=1 callback_ms=0.053716
+
+[LLM #1] 一加一等于二。
+[LLM done #1] success=true queue_ms=0.103264 first_text_ms=437.23 latency_ms=1165.68
+[ALSA write] submitted_frames=46713 state=RUNNING
+[TTS done #1] success=true queue_ms=0.098023 synth_ms=6290.53 audio_sec=1.94637 playback_ms=1985.03 xruns=0 asr_text_to_end_ms=9441.92
+[VAD] Speech #2 duration=1.13 s
+[ASR] Segment #2: 前面有什么 | latency=469.574 ms | RTF=0.415553
+[Timing] Segment #2 endpoint_est_ms=610.586 vad_to_queue_ms=0.005142 queue_wait_ms=0.216715 preprocess_ms=0.124133 asr_wall_ms=469.683 total_est_ms=1080.61
+
+[ASR->VISION #2] 前面有什么
+[Dispatch] id=2 callback_ms=0.094027
+[VLM done #2] success=true queue_ms=0.06366 disposition=completed frame_id=1112 frame_age_ms=34.146 latency_ms=1832.86
+[VLM Answer #2]  A computer monitor with a keyboard and mouse, surrounded by a green screen.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/piper-phonemize-lexicon.cc:PiperPhonemesToIdsKokoroOrKitten:261 Skip unknown phonemes. Unicode codepoint: \U+025a.
+[ALSA write] submitted_frames=101699 state=RUNNING
+[VISION TTS done #2] success=true queue_ms=0.078027 synth_ms=11817 playback_ms=4235.96 asr_text_to_end_ms=17886.3
+[Shutdown] signal=2 stopping capture; draining accepted work
+[ALSA] XRUN=0 Suspends=0 Recoveries=0 RecoveryFailures=0
+[Shutdown] capture/VAD and ASR joined; recognizer destroyed
+[Shutdown] LLM joined; Qwen runtime destroyed
+[Shutdown] TTS joined; playback_xruns=0
+[FramePool] allocated=3 in_use=0 acquired=1689 reused=1686 exhausted=0
+[CameraCounters] published=1688 fps=29.9073 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[Shutdown] playback/TTS closed; Camera stopped; VLM destroyed
+[Shutdown] complete signal=2
+
+=== ASR -> LLM -> TTS summary ===
+VAD segments: 2
+ASR recognized: 2
+Audio queue dropped: 0
+LLM accepted/completed/success/failed/rejected: 1/1/1/0/0
+TTS accepted/completed/success/failed/rejected/empty: 2/2/2/0/0/0
+Skipped VISION: 0
+VISION completed/success/failed: 1/1/0
+[AudioQueueStats] pushed=2 popped=2 dropped=0 rejected_closed=0 peak=1 pending=0
+[QueueStats] stage=inference generation=1 accepted=2 completed=2 started=2 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=1 pending=0 active=0 callback_errors=0 queue_sum_ms=0.166924 queue_max_ms=0.103264 service_sum_ms=2998.84
+[QueueStats] stage=tts generation=1 accepted=2 completed=2 started=2 failed=0 cancelled=0 expired=0 rejected_full=0 rejected_stopped=0 peak=1 pending=0 active=0 callback_errors=0 queue_sum_ms=0.17605 queue_max_ms=0.098023 service_sum_ms=24328.9
+[PipelineStats] dispatched=2 accepted=2 rejected=0 inflight=0 peak=1 limit=2 vision_accepted=1 vision_rejected=0 llm_cancelled=0 llm_expired=0 vision_cancelled=0 vision_expired=0 cancelled_before_submit=0 downstream_cancelled=0 tts_cancelled=0 tts_expired=0
+STOPPED
+[FramePool] allocated=3 in_use=0 acquired=1689 reused=1686 exhausted=0
+[CameraCounters] published=1688 fps=29.9073 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[GUI finished] code=0 orderly=1 cycles=1 heartbeat=756

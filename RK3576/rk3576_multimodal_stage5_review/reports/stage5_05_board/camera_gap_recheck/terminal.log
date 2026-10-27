@@ -1,0 +1,87 @@
+Camera format: 3840x2160, planes=1
+[CameraFormat] width=3840 height=2160 fourcc=842094158 planes=1 colorspace=0 ycbcr_enc=0 quantization=1
+[CameraPlane] plane=0 bytesperline=3840 sizeimage=12441600
+[CameraMap] buffer=0 plane=0 length=12441600
+[CameraMap] buffer=1 plane=0 length=12441600
+[CameraMap] buffer=2 plane=0 length=12441600
+[CameraMap] buffer=3 plane=0 length=12441600
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[MemoryProbe] sample=0 success=1 frame=63 vlm_ms=1710.76 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=1 success=1 frame=114 vlm_ms=1691.62 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=2 success=1 frame=165 vlm_ms=1682.9 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=3 success=1 frame=215 vlm_ms=1678.35 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=4 success=1 frame=266 vlm_ms=1665.85 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=5 success=1 frame=316 vlm_ms=1692.22 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=6 success=1 frame=366 vlm_ms=1736.74 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=7 success=1 frame=419 vlm_ms=1726.57 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=8 success=1 frame=470 vlm_ms=1689.67 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=9 success=1 frame=521 vlm_ms=1714.08 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=10 success=1 frame=572 vlm_ms=1754.24 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=11 success=1 frame=625 vlm_ms=1719.64 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=12 success=1 frame=677 vlm_ms=1717.05 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=13 success=1 frame=728 vlm_ms=1677.55 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=14 success=1 frame=778 vlm_ms=1701.68 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=15 success=1 frame=830 vlm_ms=1684.05 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=16 success=1 frame=880 vlm_ms=1689.87 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=17 success=1 frame=931 vlm_ms=1691.65 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=18 success=1 frame=982 vlm_ms=1705.45 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=19 success=1 frame=1033 vlm_ms=1683.27 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=20 success=1 frame=1083 vlm_ms=1901.17 answer= A computer screen with a laptop and some software on it, possibly for a computer program or application. error=
+[MemoryProbe] sample=21 success=1 frame=1140 vlm_ms=1688.67 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=22 success=1 frame=1191 vlm_ms=1660.36 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=23 success=1 frame=1241 vlm_ms=1672.87 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=24 success=1 frame=1291 vlm_ms=1646.14 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=25 success=1 frame=1340 vlm_ms=1728.75 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=26 success=1 frame=1392 vlm_ms=1711.83 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=27 success=1 frame=1443 vlm_ms=1662.2 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=28 success=1 frame=1493 vlm_ms=1733.37 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=29 success=1 frame=1545 vlm_ms=1669.45 answer= A computer screen displaying a webpage with some text and images. error=
+[MemoryProbe] sample=30 success=1 frame=1595 vlm_ms=1674.05 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=31 success=1 frame=1646 vlm_ms=1663.69 answer= A computer screen displaying a webpage with some text on it. error=
+[MemoryProbe] sample=32 success=1 frame=1696 vlm_ms=1838.4 answer= A computer screen with a laptop and some text on it, possibly for a presentation or study. error=
+[MemoryProbe] sample=33 success=1 frame=1751 vlm_ms=1682.2 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=34 success=1 frame=1801 vlm_ms=1686.77 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=35 success=1 frame=1852 vlm_ms=1686.25 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=36 success=1 frame=1902 vlm_ms=1657.9 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=37 success=1 frame=1952 vlm_ms=1693.42 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=38 success=1 frame=2003 vlm_ms=1880.38 answer= A computer screen with a laptop and some software on it, possibly for a computer program or application. error=
+[MemoryProbe] sample=39 success=1 frame=2059 vlm_ms=1718.96 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=40 success=1 frame=2111 vlm_ms=1743.44 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=41 success=1 frame=2163 vlm_ms=1695.35 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=42 success=1 frame=2214 vlm_ms=1682.12 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=43 success=1 frame=2265 vlm_ms=1657.39 answer= A computer screen displaying a webpage with some text and images. error=
+[MemoryProbe] sample=44 success=1 frame=2314 vlm_ms=1633.26 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=45 success=1 frame=2363 vlm_ms=1678.27 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=46 success=1 frame=2414 vlm_ms=1717.57 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=47 success=1 frame=2465 vlm_ms=1730.97 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=48 success=1 frame=2517 vlm_ms=1698.27 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=49 success=1 frame=2568 vlm_ms=1675.52 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=50 success=1 frame=2618 vlm_ms=1819.73 answer= A computer screen with a laptop on it, surrounded by a white wall and some papers. error=
+[MemoryProbe] sample=51 success=1 frame=2673 vlm_ms=1643.89 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=52 success=1 frame=2722 vlm_ms=1679.12 answer= A computer screen displaying a webpage with some text and images. error=
+[MemoryProbe] sample=53 success=1 frame=2773 vlm_ms=1671.87 answer= A computer screen displaying a webpage with some text and images. error=
+[MemoryProbe] sample=54 success=1 frame=2823 vlm_ms=1692.34 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=55 success=1 frame=2874 vlm_ms=1725.53 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=56 success=1 frame=2925 vlm_ms=1699.94 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=57 success=1 frame=2976 vlm_ms=1697.15 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=58 success=1 frame=3027 vlm_ms=1715.38 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=59 success=1 frame=3079 vlm_ms=1635.64 answer= A computer screen displaying a webpage with some text on it. error=
+[MemoryProbe] sample=60 success=1 frame=3128 vlm_ms=1666.68 answer= A computer screen with a laptop and some software on it. error=
+[MemoryProbe] sample=61 success=1 frame=3178 vlm_ms=1876.47 answer= A computer screen with a laptop on it, surrounded by a white wall and some papers. error=
+[MemoryProbe] sample=62 success=1 frame=3234 vlm_ms=1716.63 answer= A computer screen with a blue screen and some text on it. error=
+[MemoryProbe] sample=63 success=1 frame=3285 vlm_ms=1702.74 answer= A computer screen with a blue screen and some text on it. error=
+[FramePool] allocated=3 in_use=0 acquired=3338 reused=3335 exhausted=0
+[CameraCounters] published=3337 fps=29.9528 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[MemoryProbe] stopped fps=29.9836 frames=3337 timeouts=0
+[FramePool] allocated=3 in_use=0 acquired=3338 reused=3335 exhausted=0
+[CameraCounters] published=3337 fps=29.9528 timeouts=0 driver_sequence_gaps=0 pool_discarded=0

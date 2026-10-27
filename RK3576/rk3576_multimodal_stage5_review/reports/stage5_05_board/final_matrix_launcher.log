@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/tools/stage5_05_matrix.py", line 44, in <module>
+    run(name,common+['--name',name,'--audio-replay-file',str(out/(fixture+'.tsv'))]+options,280)
+  File "/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/tools/stage5_05_matrix.py", line 10, in run
+    result=json.loads((base/name/'result.json').read_text());results.append(dict(case=name,runner_returncode=rc,result=result));save(out/'progress.json',results)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/reports/stage5_05_board/final_burst_audio/result.json'
