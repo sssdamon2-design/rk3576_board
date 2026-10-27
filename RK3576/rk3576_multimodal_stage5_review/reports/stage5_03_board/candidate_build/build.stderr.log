@@ -1,0 +1,16 @@
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_03_source/src/ai/rk_backends_unavailable.cpp:21:17: warning: ‘InferenceResult {anonymous}::unavailable(const char*)’ defined but not used [-Wunused-function]
+   21 | InferenceResult unavailable(const char* message)
+      |                 ^~~~~~~~~~~
+In file included from /usr/include/rga/im2d.h:24,
+                 from /home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_03_source/tests/stage5_03_rga_probe.cpp:3:
+/usr/include/rga/im2d_type.h:355:16: warning: ISO C++ prohibits anonymous structs [-Wpedantic]
+  355 |         struct {
+      |                ^
+In file included from /usr/include/rga/im2d.h:26:
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_03_source/tests/stage5_03_rga_probe.cpp: In function ‘void runRga(rga_buffer_t, rga_buffer_t)’:
+/usr/include/rga/im2d_common.h:49:5: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+   49 |     ({ \
+      |     ^
+/home/cat/projects/RK3576/rk3576_multimodal_stage5_review/stage5_03_source/tests/stage5_03_rga_probe.cpp:55:86: note: in expansion of macro ‘imStrError’
+   55 |     if(code!=IM_STATUS_SUCCESS)throw std::runtime_error(std::string("RGA process: ")+imStrError(code));
+      |                                                                                      ^~~~~~~~~~

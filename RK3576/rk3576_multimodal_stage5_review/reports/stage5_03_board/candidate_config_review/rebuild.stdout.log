@@ -1,0 +1,47 @@
+[  8%] Built target multimodal_audio
+[ 13%] Built target asr_pipeline_tests
+[ 27%] Built target multimodal_core
+[ 31%] Built target audio_preprocessor_tests
+[ 36%] Built target multimodal_tts
+[ 37%] Building CXX object CMakeFiles/multimodal_camera.dir/src/video/camera_service.cpp.o
+[ 40%] Built target rkllm_worker_smoke
+[ 42%] Built target audio_capture_smoke
+[ 45%] Built target asr_live_smoke
+[ 47%] Built target asr_pipeline_smoke
+[ 50%] Built target asr_vad_smoke
+[ 52%] Built target asr_llm_smoke
+[ 56%] Building CXX object CMakeFiles/image_pipeline_tests.dir/tests/image_pipeline_tests.cpp.o
+[ 60%] Built target async_pipeline_tests
+[ 61%] Building CXX object CMakeFiles/stage5_03_rga_probe.dir/tests/stage5_03_rga_probe.cpp.o
+[ 62%] Linking CXX static library libmultimodal_camera.a
+[ 63%] Built target multimodal_camera
+[ 66%] Built target llm_worker_tests
+[ 67%] Building CXX object CMakeFiles/camera_service_tests.dir/tests/camera_service_tests.cpp.o
+[ 68%] Linking CXX executable stage5_03_rga_probe
+[ 68%] Built target stage5_03_rga_probe
+[ 71%] Built target tts_smoke
+[ 73%] Built target tts_playback_smoke
+[ 76%] Built target tts_worker_smoke
+[ 78%] Built target tts_worker_queue_smoke
+[ 80%] Building CXX object CMakeFiles/asr_llm_tts_smoke.dir/src/audio/asr_llm_tts_smoke.cpp.o
+[ 81%] Building CXX object CMakeFiles/image_pipeline_tests.dir/src/video/camera_service.cpp.o
+[ 82%] Building CXX object CMakeFiles/camera_service_tests.dir/src/video/camera_service.cpp.o
+[ 83%] Linking CXX executable image_pipeline_tests
+[ 85%] Built target image_pipeline_tests
+[ 86%] Building CXX object CMakeFiles/rk3576_multimodal.dir/src/main.cpp.o
+[ 87%] Linking CXX executable camera_service_tests
+[ 88%] Built target camera_service_tests
+[ 90%] Building CXX object CMakeFiles/asr_route_smoke.dir/src/audio/asr_route_smoke.cpp.o
+[ 91%] Building CXX object CMakeFiles/rk3576_multimodal.dir/src/app/cli.cpp.o
+[ 92%] Linking CXX executable asr_llm_tts_smoke
+[ 93%] Linking CXX executable asr_route_smoke
+[ 93%] Built target asr_llm_tts_smoke
+[ 95%] Building CXX object CMakeFiles/stage5_03_memory_probe.dir/tests/stage5_03_memory_probe.cpp.o
+[ 95%] Built target asr_route_smoke
+[ 96%] Building CXX object CMakeFiles/stage5_02_npu_probe.dir/tests/stage5_02_npu_probe.cpp.o
+[ 97%] Linking CXX executable rk3576_multimodal
+[ 97%] Built target rk3576_multimodal
+[ 98%] Linking CXX executable stage5_02_npu_probe
+[ 98%] Built target stage5_02_npu_probe
+[100%] Linking CXX executable stage5_03_memory_probe
+[100%] Built target stage5_03_memory_probe
