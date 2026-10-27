@@ -1,0 +1,20 @@
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[MemoryProbe] sample=0 success=1 frame=29 vlm_ms=1721.63 answer= A computer monitor with a blue screen and some text on it. error=
+[MemoryProbe] sample=1 success=1 frame=82 vlm_ms=1977.49 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[MemoryProbe] sample=2 success=1 frame=138 vlm_ms=1954.76 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[MemoryProbe] sample=3 success=1 frame=29 vlm_ms=1734.81 answer= A computer monitor with a blue screen and some text on it. error=
+[MemoryProbe] sample=4 success=1 frame=82 vlm_ms=1870.18 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[MemoryProbe] sample=5 success=1 frame=138 vlm_ms=1857.25 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera. error=
+[CameraCounters] published=0 fps=0 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
+[MemoryProbe] stopped fps=0 frames=0 timeouts=0
+[CameraCounters] published=0 fps=0 timeouts=0 driver_sequence_gaps=0 pool_discarded=0
