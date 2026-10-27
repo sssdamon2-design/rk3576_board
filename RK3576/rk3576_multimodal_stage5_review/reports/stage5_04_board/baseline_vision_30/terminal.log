@@ -1,0 +1,43 @@
+[VisionTensor] input_type=1 input_fmt=1 input_elems=786432 input_w_stride=512 input_size=1572864 input_size_with_stride=1572864 output_elems=36864 output_type=1 input_dims=1,512,512,3, output_dims=1,64,576,
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/projects/RK3576/rk3576_multimodal/models/vlm/smolvlm2_256m_w4a16_rk3576.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 2048, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+I rkllm: Reset chat template:
+I rkllm: System_prompt: 
+I rkllm: Prompt_prefix: <|im_start|>User:
+I rkllm: Prompt_postfix: <end_of_utterance>\nAssistant:
+W rkllm: Calling rkllm_set_chat_template will disable the internal automatic chat template parsing, including enable_thinking. Make sure your custom prompt is complete and valid.
+[VisionBench] sample=0 fixture=0 success=1 ms=1748.46 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=1 fixture=1 success=1 ms=1819.86 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=2 fixture=2 success=1 ms=1830.03 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=3 fixture=0 success=1 ms=1786.2 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=4 fixture=1 success=1 ms=1903.6 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=5 fixture=2 success=1 ms=1872.33 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=6 fixture=0 success=1 ms=2547.73 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=7 fixture=1 success=1 ms=1818.32 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=8 fixture=2 success=1 ms=1815.73 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=9 fixture=0 success=1 ms=1614.34 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=10 fixture=1 success=1 ms=1777.3 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=11 fixture=2 success=1 ms=1781.07 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=12 fixture=0 success=1 ms=1606.25 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=13 fixture=1 success=1 ms=1835.57 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=14 fixture=2 success=1 ms=1765.18 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=15 fixture=0 success=1 ms=1619.42 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=16 fixture=1 success=1 ms=2034.17 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=17 fixture=2 success=1 ms=1744.22 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=18 fixture=0 success=1 ms=1785.83 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=19 fixture=1 success=1 ms=1746 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=20 fixture=2 success=1 ms=2136.22 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=21 fixture=0 success=1 ms=1583.65 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=22 fixture=1 success=1 ms=1801.52 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=23 fixture=2 success=1 ms=1741.83 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=24 fixture=0 success=1 ms=1657.82 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=25 fixture=1 success=1 ms=1728.84 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=26 fixture=2 success=1 ms=1878.87 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=27 fixture=0 success=1 ms=1740.9 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=28 fixture=1 success=1 ms=1843.5 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=29 fixture=2 success=1 ms=1794.82 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
+[VisionBench] sample=30 fixture=0 success=1 ms=1717.08 answer= A computer monitor with a blue screen and some text on it.
+[VisionBench] sample=31 fixture=1 success=1 ms=1753.21 answer= A computer monitor with a blue screen, and a black stand holding it up to the camera.
