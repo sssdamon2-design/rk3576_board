@@ -1,0 +1,38 @@
+[LLM] Not ready: RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VLM] Not ready: RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+Loading SenseVoiceSmall...
+ASR initialized
+Camera format: 3840x2160, planes=1
+Camera started: /dev/video11
+Listening for 20 seconds...
+Speak a TEXT question and a VISION question.
+[VAD] Speech #1 duration=1.418 s
+[ASR] Segment #1: 介绍一下你自己 | latency=544.365 ms | RTF=0.383896
+[Timing] Segment #1 endpoint_est_ms=605.242 vad_to_queue_ms=8.3e-05 queue_wait_ms=0.162322 preprocess_ms=8.7e-05 asr_wall_ms=544.403 total_est_ms=1149.81
+[Request] 介绍一下你自己
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VAD] Speech #2 duration=1.45 s
+[ASR] Segment #2: 前方道路上有什么 | latency=533.185 ms | RTF=0.367714
+[Timing] Segment #2 endpoint_est_ms=603.523 vad_to_queue_ms=0.000248 queue_wait_ms=0.229862 preprocess_ms=0.000356 asr_wall_ms=533.222 total_est_ms=1136.98
+[Request] 前方道路上有什么
+[Route] VISION (matched: 前方道路上有什么)
+[Frame] ID=224, age=18.9108 ms
+[Backend unavailable/error] RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+[VAD] Speech #3 duration=1.194 s
+[ASR] Segment #3: 什么是多线程 | latency=466.246 ms | RTF=0.390491
+[Timing] Segment #3 endpoint_est_ms=615.57 vad_to_queue_ms=0.00026 queue_wait_ms=0.242912 preprocess_ms=0.000335 asr_wall_ms=466.28 total_est_ms=1082.09
+[Request] 什么是多线程
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[ALSA] XRUN=0 Suspends=0 Recoveries=0 RecoveryFailures=0
+=== ASR routing summary ===
+Detected: 3
+Recognized: 3
+Routed: 3
+TEXT: 2
+VISION: 1
+Dropped: 0
+Vision frame seen: yes
+Wall time: 20.1291 s
+PASS

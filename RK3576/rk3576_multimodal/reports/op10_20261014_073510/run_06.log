@@ -1,0 +1,45 @@
+[LLM] Not ready: RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VLM] Not ready: RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+Loading SenseVoiceSmall...
+ASR initialized
+Camera format: 3840x2160, planes=1
+Camera started: /dev/video11
+Listening for 20 seconds...
+Speak a TEXT question and a VISION question.
+[VAD] Speech #1 duration=0.714 s
+[ASR] Segment #1: 你是谁 | latency=333.673 ms | RTF=0.467329
+[Request] 你是谁
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VAD] Speech #2 duration=1.386 s
+[ASR] Segment #2: 前方道路上有什么 | latency=537.619 ms | RTF=0.387893
+[Request] 前方道路上有什么
+[Route] VISION (matched: 前方道路上有什么)
+[Frame] ID=165, age=18.3296 ms
+[Backend unavailable/error] RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+[VAD] Speech #3 duration=1.45 s
+[ASR] Segment #3: 什么是网络驱动 | latency=543.396 ms | RTF=0.374756
+[Request] 什么是网络驱动
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VAD] Speech #4 duration=1.418 s
+[ASR] Segment #4: 现在的画面是什么 | latency=532.781 ms | RTF=0.375727
+[Request] 现在的画面是什么
+[Route] VISION (matched: 现在的画面)
+[Frame] ID=400, age=38.0519 ms
+[Backend unavailable/error] RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+[VAD] Speech #5 duration=1.194 s
+[ASR] Segment #5: 什么是县程 | latency=468.523 ms | RTF=0.392398
+[Request] 什么是县程
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+=== ASR routing summary ===
+Detected: 5
+Recognized: 5
+Routed: 5
+TEXT: 3
+VISION: 2
+Dropped: 0
+Vision frame seen: yes
+Wall time: 20.1123 s
+PASS

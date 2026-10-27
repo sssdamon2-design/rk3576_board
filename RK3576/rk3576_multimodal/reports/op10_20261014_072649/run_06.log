@@ -1,0 +1,33 @@
+[LLM] Not ready: RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VLM] Not ready: RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+Loading SenseVoiceSmall...
+ASR initialized
+Camera format: 3840x2160, planes=1
+Camera started: /dev/video11
+Listening for 20 seconds...
+Speak a TEXT question and a VISION question.
+[VAD] Speech #1 duration=0.778 s
+[ASR] Segment #1: 明天吃什么 | latency=382.712 ms | RTF=0.491918
+[Request] 明天吃什么
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VAD] Speech #2 duration=1.674 s
+[ASR] Segment #2: 前方牌照是多少 | latency=619.313 ms | RTF=0.36996
+[Request] 前方牌照是多少
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VAD] Speech #3 duration=1.514 s
+[ASR] Segment #3: 前方戳出哪个型号 | latency=574.221 ms | RTF=0.379274
+[Request] 前方戳出哪个型号
+[Route] TEXT (default text rule)
+[Backend unavailable/error] RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+=== ASR routing summary ===
+Detected: 3
+Recognized: 3
+Routed: 3
+TEXT: 3
+VISION: 0
+Dropped: 0
+Vision frame seen: no
+Wall time: 20.1239 s
+FAIL

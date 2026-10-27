@@ -1,0 +1,18 @@
+[LLM] Not ready: RK3576 Runtime/SDK not available: RKLLM headers, library and verified adapter are absent
+[VLM] Not ready: RK3576 Runtime/SDK not available: VLM runtime, vision encoder and verified adapter are absent
+Loading SenseVoiceSmall...
+ASR initialized
+Camera format: 3840x2160, planes=1
+Camera started: /dev/video11
+Listening for 20 seconds...
+Speak a TEXT question and a VISION question.
+=== ASR routing summary ===
+Detected: 0
+Recognized: 0
+Routed: 0
+TEXT: 0
+VISION: 0
+Dropped: 0
+Vision frame seen: no
+Wall time: 20.1149 s
+FAIL
